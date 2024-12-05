@@ -1,0 +1,113 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+}
+
+.container{
+    width: 80%;
+    height: auto;
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+/* ---------First Page of Card-----------*/
+
+.firstPage{
+    background-color: #a43838;
+    height: 100%;
+}
+.contSong{
+    height: 80vh;
+    border: 2px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.check{
+    background-color: aquamarine;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.next{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 80%;
+    padding: 5px;
+    background-color: #1d2e9c;
+}
+
+.icon{
+    width: 40px;
+    cursor: pointer;
+}
+
+.playBtn, .restartBtn{
+    border: none;
+    background-color: #38a448;
+    /* background-color: transparent; */
+}
+
+.playBtn{
+    width: 80%;
+}
+
+.playBtn .icon{
+    width: 100%;
+}
+
+.restartBtn{
+    width: 20%;
+}
+
+.restartBtn .icon{
+    width: 100%;
+}
+
+/* -------------Second Page of Card-----------*/
+.secondPage{
+    background-color: #38a448;
+    height: 100%;
+    display: none;
+    
+}
+
+.birdName{
+    height: 500px;
+    background-color: #5db66a;
+}
+
+.birdImg{
+    width: 90%;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+/* -------------------------------------- */
+
+.contSong{
+    display: none;
+}
+
+#c0{
+    display: block;
+}
+
+
+
+
+
+/* Gotowe zestawy */
+.readyMadeSets{
+    display: none;
+}

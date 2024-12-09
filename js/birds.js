@@ -46,7 +46,7 @@ const birds = [
 {
     "nazwa":"Rudzik",
     "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44599871/1200",
-    "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527768/mp3"],
+    "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527768/mp3"],
     "siedlisko": "",
     "opis": "",
     "okres": ""

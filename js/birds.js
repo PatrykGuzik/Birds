@@ -6,40 +6,47 @@ let repeatBirds2 = []
 const birds = [
     {
         "nazwa":"Bogatka",
-        "jpg": "bogatka",
-        "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3", "https://www.glosy-ptakow.pl/sounds/653.mp3", "dymowka_spiew"],
+        "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/169357911/900",
+        "spiew": [
+            "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527685/mp3",
+            "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553605/mp3",
+            "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/538211/mp3"
+            ],
         "siedlisko": "",
         "opis": "",
         "okres": "",
     },
     {
-        "nazwa":"Czyż",
-        "jpg": "czyż",
-        "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/33236491/mp3"],
+        "nazwa":"Mysikrólik",
+        "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/45035631/1200",
+        "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553763/mp3"],
         "siedlisko": "",
         "opis": "",
         "okres": ""
     },
     {
-      "nazwa":"czajka",
-      "jpg": "czajka",
-      "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3"],
+      "nazwa":"Kos",
+      "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44584641/1200",
+      "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527798/mp3"],
       "siedlisko": "",
       "opis": "",
       "okres": ""
   },
   {
-    "nazwa":"Czernica",
-    "jpg": "czernica",
-    "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3", "czyz_spiew", "https://www.glosy-ptakow.pl/sounds/653.mp3"],
+    "nazwa":"Raniuszek",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/612496830/1200",
+    "spiew": [
+        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/541083/mp3",
+        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553699/mp3"
+    ],
     "siedlisko": "",
     "opis": "",
     "okres": "",
 },
 {
-    "nazwa":"Gąsiorek",
-    "jpg": "gasiorek",
-    "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3"],
+    "nazwa":"Rudzik",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44599871/1200",
+    "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527768/mp3"],
     "siedlisko": "",
     "opis": "",
     "okres": ""
@@ -92,13 +99,12 @@ function createNewBirdList(listName, newBirdList, oldBirdList){
 
 
 
-const birdList1 = ["Czyż", "Bogatka"]
+const birdList1 = ["Mysikrólik", "Bogatka","Kos","Raniuszek", "Rudzik"]
 const birdList2 = ["Czyż"]
 let sets = [];
 
 
-sets.push(createNewBirdList("Nowa lista", birdList1, birds))
-sets.push(createNewBirdList("Praki Gór", birdList2, birds))
+sets.push(createNewBirdList("Ptaki Miasta", birdList1, birds))
 
 
 

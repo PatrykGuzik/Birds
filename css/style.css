@@ -6,25 +6,27 @@ font-family: Arial, Helvetica, sans-serif;
 .container{
     width: 80%;
     height: auto;
-    background-color: antiquewhite;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    height: 400px;
 }
 
 /* ---------First Page of Card-----------*/
 
 .firstPage{
-    background-color: #a43838;
-    height: 100%;
+    background-color: transparent;
+
 }
 .contSong{
-    height: 80vh;
-    border: 2px solid black;
+    border: 3px solid black;
+    border-radius: 5px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
 }
 
 .check{
@@ -34,13 +36,16 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .next{
+    background-color: transparent;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid black;
-    border-radius: 4px;
-    width: 80%;
-    padding: 5px;
-    background-color: #1d2e9c;
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px; 
 }
 
 .icon{
@@ -50,8 +55,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 .playBtn, .restartBtn{
     border: none;
-    background-color: #38a448;
-    /* background-color: transparent; */
+    background-color: transparent;
 }
 
 .playBtn{
@@ -72,15 +76,12 @@ font-family: Arial, Helvetica, sans-serif;
 
 /* -------------Second Page of Card-----------*/
 .secondPage{
-    background-color: #38a448;
     height: 100%;
     display: none;
-    
 }
 
 .birdName{
-    height: 500px;
-    background-color: #5db66a;
+    font-size: 25px;
 }
 
 .birdImg{
@@ -88,12 +89,33 @@ font-family: Arial, Helvetica, sans-serif;
     border-radius: 8px;
 }
 
-
+.ifKnow button{
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+.ifKnow .no{
+    background-color: red;
+}
+.ifKnow .yes{
+    background-color: rgb(8, 232, 30);
+}
 
 
 
 
 /* -------------------------------------- */
+
+
+
+
 
 .contSong{
     display: none;
@@ -110,4 +132,79 @@ font-family: Arial, Helvetica, sans-serif;
 /* Gotowe zestawy */
 .readyMadeSets{
     display: none;
+}
+
+
+/* -------------Menu------------- */
+
+.menu{
+    width: 90%;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+
+
+
+.menu button, .readyMadeSets button{
+    background-color: transparent;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px; 
+
+}
+
+/* ------REPEAT------ */
+
+.repeatCont button, .finishCont button{
+    background-color: transparent;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px; 
+}
+
+.finishInfo{
+    background-color: transparent;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.menuBtn{
+    background-color: transparent;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px; 
+}
+
+/* ---Counter---- */
+#counter{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
 }

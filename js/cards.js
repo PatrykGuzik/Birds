@@ -1,8 +1,8 @@
 function getButtonsIKnow(id){
     const html = `
-      <div id="ifKnow${id}">
-          <button id="iDontKnow${id}">nie wiedziałem</button>
-          <button id="iKnow${id}">wiedziałem</button>
+      <div class="ifKnow" id="ifKnow${id}">
+          <button class="no" id="iDontKnow${id}">x</button>
+          <button class="yes" id="iKnow${id}">x</button>
       </div>
     `
     return html
@@ -11,9 +11,8 @@ function getButtonsIKnow(id){
 function getLastCard() {
     const container = document.getElementById("container1")
     const html = `
-    <div>
-        powtórz 
-        <button onclick="makeRepeat()">powtórz</button>
+    <div class="repeatCont">
+        <button onclick="makeRepeat()">Powtórz</button>
         <button onclick="getMenu()">Przejdź do menu</button>
     </div>
     `;
@@ -23,9 +22,9 @@ function getLastCard() {
 function getFinishCard() {
   const container = document.getElementById("container1")
     const html = `
-    <div>
-        Skończyłeś zestaw
-        <button onclick="getMenu()">przejdź do menu</button>
+    <div class="finishCont">
+        <div class="finishInfo">To już wszystko</div>
+        <button onclick="getMenu()">Przejdź do menu</button>
     </div>
     `;
     container.innerHTML = html
@@ -75,7 +74,7 @@ function getSoundsOnPage(birdsList) {
                   `;
       }
   
-    row += `<button onclick="getMenu()">Menu</button>`
+    row += `<button class="menuBtn" onclick="getMenu()">Menu</button>`
     cont.innerHTML=row;
 }
 
@@ -96,7 +95,7 @@ function check(birdList){
         answer= document.getElementById(`birdName${i}`)
         answer.innerHTML = 
         `
-        <img class="birdImg" src="img/ptaki/${birdList[i].jpg}.jpg" alt="" />
+        <img class="birdImg" src="${birdList[i].jpg}" alt="" />
         <div>${birdList[i].nazwa}</div>
         
         `

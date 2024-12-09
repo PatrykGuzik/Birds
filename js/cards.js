@@ -1,8 +1,8 @@
 function getButtonsIKnow(id){
     const html = `
       <div class="ifKnow" id="ifKnow${id}">
-          <button class="no" id="iDontKnow${id}">x</button>
-          <button class="yes" id="iKnow${id}">x</button>
+          <button class="no" id="iDontKnow${id}">Nie wiem</button>
+          <button class="yes" id="iKnow${id}">Wiem</button>
       </div>
     `
     return html

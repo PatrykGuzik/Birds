@@ -18,6 +18,8 @@ function showPanel(panel) {
   const cards = document.querySelector(".cards");
   const menu = document.querySelector(".menu");
   const readyMadeSets = document.querySelector(".readyMadeSets");
+  const mySets = document.querySelector(".mySets");
+  const birds = document.querySelector(".birds");
 
   const panelToShow = document.querySelector(`.${panel}`);
 
@@ -25,6 +27,8 @@ function showPanel(panel) {
   cards.style.display = "none";
   menu.style.display = "none";
   readyMadeSets.style.display = "none";
+  mySets.style.display = "none"
+  birds.style.display = "none"
   
   panelToShow.style.display = "block";
 

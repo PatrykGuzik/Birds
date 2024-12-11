@@ -81,8 +81,7 @@ function filterBirds(nazwa, listaPtaków) {
 function createNewBirdList(listName, newBirdList, oldBirdList){
     
     let a = { "name" : listName,
-        "ptaki": [],
-        
+        "ptaki": [], 
     }
     
     
@@ -108,4 +107,19 @@ sets.push(createNewBirdList("Ptaki Miasta", birdList1, birds))
 
 
 
+// Własne Zestawy
+let mySets = []
+
+// const birdsString = localStorage.getItem('myBirds');
+// if (birdsString) {
+//     const birdObiekt = JSON.parse(birdsString);
+//     mySets.push(birdObiekt)
+//     console.log(mySets);
+    
+//     console.log(mySets[0].ptaki);
+    
+   
+// } else {
+//     console.log('Obiekt nie został zapisany w localStorage');
+// }
 

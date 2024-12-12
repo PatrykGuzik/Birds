@@ -53,8 +53,11 @@ const birds = [
 },
 {
   "nazwa":"Gil",
-  "jpg": "Gil",
-  "spiew": ["https://www.glosy-ptakow.pl/sounds/653.mp3"],
+  "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/257629601/900",
+  "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552987/mp3",
+    "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527850/mp3",
+    "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/541220/mp3"
+  ],
   "siedlisko": "",
   "opis": "",
   "okres": ""
@@ -98,12 +101,13 @@ function createNewBirdList(listName, newBirdList, oldBirdList){
 
 
 
-const birdList1 = ["Mysikrólik", "Bogatka","Kos","Raniuszek", "Rudzik"]
-const birdList2 = ["Czyż"]
+const birdList1 = ["Mysikrólik", "Bogatka","Kos","Raniuszek", "Rudzik","Gil"]
+const birdList2 = ["Gil"]
 let sets = [];
 
 
 sets.push(createNewBirdList("Ptaki Miasta", birdList1, birds))
+sets.push(createNewBirdList("Test", birdList2, birds))
 
 
 

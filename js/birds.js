@@ -62,8 +62,94 @@ const birds = [
   "opis": "",
   "okres": ""
 },
+{
+    "nazwa":"Modraszka",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/46409481/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553594/mp3",
+        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553595/mp3"
+    ],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Kawka",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/45035361/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/538145/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Wrona siwa",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/261728341/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553565/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Gawron",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44959001/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553554/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Kwiczoł",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/256767691/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552918/mp3",
+        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552920/mp3"
+    ],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Czajka",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/609204339/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552843/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+// {
+//     "nazwa":"",
+//     "jpg": "",
+//     "spiew":[""],
+//     "siedlisko": "",
+//     "opis": "",
+//     "okres": ""
+// },
+// {
+//     "nazwa":"",
+//     "jpg": "",
+//     "spiew":[""],
+//     "siedlisko": "",
+//     "opis": "",
+//     "okres": ""
+// },
+// {
+//     "nazwa":"",
+//     "jpg": "",
+//     "spiew":[""],
+//     "siedlisko": "",
+//     "opis": "",
+//     "okres": ""
+// },
+// {
+//     "nazwa":"",
+//     "jpg": "",
+//     "spiew":[""],
+//     "siedlisko": "",
+//     "opis": "",
+//     "okres": ""
+// },
   
 ]
+
+
 
 
 function filterBirds(nazwa, listaPtaków) {

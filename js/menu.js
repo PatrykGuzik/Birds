@@ -3,11 +3,15 @@ function getMenu() {
     repeatBirds1 = [];
     repeatBirds2 = [];
 
+    // zatrzymanie odtwarzania
+    stopAllMediaPlayers()
+
     showPanel("menu")
 
 
 
 };
+
 
 
 function getReadyMadeSets() {

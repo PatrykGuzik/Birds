@@ -35,3 +35,15 @@ function showPanel(panel) {
 
 
 }
+
+
+function stopAllMediaPlayers() {
+  // Pobranie wszystkich elementów audio i video na stronie
+  const mediaElements = document.querySelectorAll('audio, video');
+  
+  // Iteracja po wszystkich elementach i zatrzymanie ich
+  mediaElements.forEach(element => {
+    element.pause(); // Zatrzymuje odtwarzanie
+    element.currentTime = 0; // Przewija do początku, opcjonalnie
+  });
+}

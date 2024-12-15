@@ -52,9 +52,9 @@ function getSoundsOnPage(birdsList) {
                     <div id=firstPage${i} class="firstPage">
                       <audio id="myAudio${i}" src="${getRandVoice(i,birdsList)}"></audio>
   
-                      <button class="playBtn" id="toggleButton${i}"><img class="icon" src="img/icons/play.svg" alt="" /></button>
+                      <button class="playBtn" id="toggleButton${i}"><i class="fas fa-play"></i></button>
   
-                      <button class="restartBtn" id="restartButton${i}"><img class="icon" src="img/icons/restart.svg" alt="" /></button>
+                      <button class="restartBtn" id="restartButton${i}"><i class="fa-solid fa-rotate-left"></i></button>
                       
   
                       
@@ -201,11 +201,11 @@ function changePage(i){
       if (audio.paused) {
         // Jeśli audio jest wstrzymane, odtwarzamy je
         audio.play();
-        toggleButton.innerHTML = `<img class="icon" src="img/icons/pause.svg" alt="" />`; // Zmieniamy tekst przycisku na "Pause"
+        toggleButton.innerHTML = `<i class="fas fa-pause"></i>`; // Zmieniamy tekst przycisku na "Pause"
       } else {
         // Jeśli audio jest odtwarzane, zatrzymujemy je
         audio.pause();
-        toggleButton.innerHTML = `<img class="icon" src="img/icons/play.svg" alt="" />`; // Zmieniamy tekst przycisku na "Play"
+        toggleButton.innerHTML = `<i class="fas fa-play"></i>`; // Zmieniamy tekst przycisku na "Play"
       }
       });
   
@@ -214,6 +214,6 @@ function changePage(i){
         // Ustawiamy czas na początek (0) i odtwarzamy
         audio.currentTime = 0;
         audio.play();
-        toggleButton.innerHTML = `<img class="icon" src="img/icons/pause.svg" alt="" />`; // Zmieniamy tekst przycisku na "Pause" po restarcie
+        toggleButton.innerHTML = `<i class="fas fa-pause"></i>`; // Zmieniamy tekst przycisku na "Pause" po restarcie
       });
   }

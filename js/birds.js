@@ -114,22 +114,49 @@ const birds = [
     "opis": "",
     "okres": ""
 },
-// {
-//     "nazwa":"",
-//     "jpg": "",
-//     "spiew":[""],
-//     "siedlisko": "",
-//     "opis": "",
-//     "okres": ""
-// },
-// {
-//     "nazwa":"",
-//     "jpg": "",
-//     "spiew":[""],
-//     "siedlisko": "",
-//     "opis": "",
-//     "okres": ""
-// },
+{
+    "nazwa":"Dzięcioł Duży",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/256154511/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553480/mp3"
+    ],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Kopciuszek",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44587591/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/538265/mp3",
+        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552929/mp3"
+    ],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Sierpówka",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/308119951/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/535404/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Pustułka",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/256164041/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552882/mp3","https://cdn.download.ams.birds.cornell.edu/api/v2/asset/541037/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
+{
+    "nazwa":"Oknówka",
+    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/258242941/900",
+    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552913/mp3","https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527675/mp3"],
+    "siedlisko": "",
+    "opis": "",
+    "okres": ""
+},
 // {
 //     "nazwa":"",
 //     "jpg": "",

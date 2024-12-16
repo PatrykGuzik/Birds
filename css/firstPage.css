@@ -1,0 +1,80 @@
+/* First Page of card */
+.firstPage{
+    background-color: transparent;
+
+}
+.contSong{
+    background-color: white;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
+}
+
+.check{
+    background-color: aquamarine;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.next{
+    background-color: var(--background-color); /* Jasny żółty */
+    color: var(--main-text-color); /* Szaro-niebieski */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50px; 
+    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
+}
+
+.fa-rotate-left{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+.fa-play, .fa-pause{
+    font-size: 150px;
+    color: rgb(255, 255, 255);
+}
+
+.fa-play{
+    transform: translateX(-5px);
+}
+
+
+
+.playBtn, .restartBtn{
+    border: none;
+    background-color: transparent;
+}
+
+
+.playBtn{
+    box-shadow:none;
+    width: 200px;
+    height: 200px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+}
+
+.playBtn .icon{
+    width: 100%;
+    box-shadow:none;
+}
+
+.restartBtn{
+    width: 20%;
+    box-shadow:none;
+}
+
+.restartBtn .icon{
+    width: 100%;
+}

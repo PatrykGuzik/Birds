@@ -9,6 +9,7 @@ function getButtonsIKnow(id){
   }
 
 function getLastCard() {
+    hiddCounter()
     const container = document.getElementById("container1")
     const html = `
     <div class="repeatCont">
@@ -20,6 +21,7 @@ function getLastCard() {
 }
 
 function getFinishCard() {
+  hiddCounter()
   const container = document.getElementById("container1")
     const html = `
     <div class="finishCont">
@@ -40,6 +42,7 @@ function getRandVoice(birdNumber, birdList) {
 }
 
 function getSoundsOnPage(birdsList) {
+    showCounter()
     showPanel("cards");
     refreshCounter(1,birdsList.length)
     const cont = document.getElementById("container1")
@@ -143,6 +146,7 @@ function makeRepeat() {
 
 function showNextCard(cardNr, lengthList) {
 
+
     for (let i = 0; i < lengthList; i++){
       const card = document.getElementById(`c${i}`)
       card.style.display = "none";
@@ -195,6 +199,9 @@ function changePage(i){
     const restartButton = document.getElementById(`restartButton${i}`);
   
     audio.pause();
+    audio.addEventListener('ended', function() {
+      toggleButton.innerHTML = `<i class="fas fa-play"></i>`; // Zmieniamy tekst przycisku na "Play"
+    });
   
     // Funkcja włączająca/wyłączająca odtwarzanie
     toggleButton.addEventListener('click', function() {

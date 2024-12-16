@@ -1,0 +1,49 @@
+/* -------------Second Page of Card-----------*/
+.secondPage{
+    height: 100%;
+    display: none;
+}
+
+.birdName{
+    font-size: 25px;
+}
+
+.birdImg{
+    margin-top: 5px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.ifKnow button{
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+.ifKnow .no{
+    background-color: rgba(255, 68, 68, 0.719);
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100px;
+
+}
+.ifKnow .yes{
+    background-color: rgba(84, 255, 101, 0.636);
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100px;
+}

@@ -1,0 +1,56 @@
+
+
+
+/* Dodawanie Zestawu */
+.birdContainer{
+    width: 90%;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lista ptaków do wybrania */
+.birdA{
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: 3px solid rgb(106, 40, 40);
+    border-radius: 5px; 
+}
+
+.birdHidden{
+    display: none;
+    color: aliceblue;
+}
+
+.inputContainer{
+    display: block;
+}
+
+
+.inputName{
+    text-align: center;
+    font-size: 20px;
+}
+.validationInput{
+    display: none;
+    text-align: center;
+    color: rgb(203, 22, 1);
+}
+
+/* Input */
+#nameOfSet{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px; 
+}

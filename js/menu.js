@@ -75,26 +75,38 @@ function getMySets() {
 function setNewSet() {
     const allBirds = document.getElementById("birds")
 
+    const sortBirds = sortBirdsByName(birds)
+
+
+    let hiddenBirds = ``;
+    for (let i = 0; i < birds.length; i++) {
+            hiddenBirds += `
+                    <div class="birdHidden" id="hiddenBird${i}">${sortBirds[i].nazwa}</div>
+                    `;
+        }
+
+
+    let birdList = ``;
+    for (let i = 0; i < birds.length; i++) {
+            birdList += `
+                    <div class="birdA" id="bird${i}">${birds[i].nazwa}</div>
+                    `;
+        }
 
     let row = `<div class="inputContainer">
     <div class="inputName">nazwa zestawu</div>
     <input type="text" autocomplete="off" id="nameOfSet" name="name"  /></div>
     <div class="validationInput">Wprowadź nazwę zestawu</div>
-    <div class="birdContainer">`;
+    <div class="birdContainer"> 
+    <div class="hiddenBirdsCont">${hiddenBirds}</div>
+    <div class="birdListCont">${birdList}</div>`;
 
 
 
-    for (let i = 0; i < birds.length; i++) {
-        row += `
-                <div class="birdHidden" id="hiddenBird${i}">${birds[i].nazwa}</div>
-                 `;
-    }
 
-    for (let i = 0; i < birds.length; i++) {
-        row += `
-                <div class="birdA" id="bird${i}">${birds[i].nazwa}</div>
-                 `;
-    }
+    
+
+    
   
     row += `</div>
     <button id="saveBtn">zapisz</button>

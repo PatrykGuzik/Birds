@@ -47,3 +47,29 @@ function stopAllMediaPlayers() {
     element.currentTime = 0; // Przewija do początku, opcjonalnie
   });
 }
+
+
+
+// Sortowanie 
+function sortBirdsByName(birds) {
+  return birds.sort((a, b) => {
+      // Porównujemy nazwy ptaków (będą one posortowane alfabetycznie)
+      if (a.nazwa < b.nazwa) {
+          return -1;  // a powinno być przed b
+      }
+      if (a.nazwa > b.nazwa) {
+          return 1;  // b powinno być przed a
+      }
+      return 0;  // jeśli są równe
+  });
+}
+
+
+function hiddCounter(){
+  const counter= document.getElementById("counter")
+  counter.style.display = "none"
+}
+function showCounter(){
+  const counter= document.getElementById("counter")
+  counter.style.display = "block"
+}

@@ -1,242 +1,679 @@
 let isRepeatBirds1 = true;
-let repeatBirds1 = []
-let repeatBirds2 = []
-
+let repeatBirds1 = [];
+let repeatBirds2 = [];
 
 const birds = [
-    {
-        "nazwa":"Bogatka",
-        "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/169357911/900",
-        "spiew": [
-            "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527685/mp3",
-            "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553605/mp3",
-            "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/538211/mp3"
-            ],
-        "siedlisko": "",
-        "opis": "",
-        "okres": "",
-    },
-    {
-        "nazwa":"Mysikrólik",
-        "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/45035631/1200",
-        "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553763/mp3"],
-        "siedlisko": "",
-        "opis": "",
-        "okres": ""
-    },
-    {
-      "nazwa":"Kos",
-      "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44584641/1200",
-      "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527798/mp3"],
-      "siedlisko": "",
-      "opis": "",
-      "okres": ""
-  },
-  {
-    "nazwa":"Raniuszek",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/612496830/1200",
-    "spiew": [
-        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/541083/mp3",
-        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553699/mp3"
-    ],
-    "siedlisko": "",
-    "opis": "",
-    "okres": "",
-},
-{
-    "nazwa":"Rudzik",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44599871/1200",
-    "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527768/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-  "nazwa":"Gil",
-  "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/257629601/900",
-  "spiew": ["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552987/mp3",
-    "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527850/mp3",
-    "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/541220/mp3"
-  ],
-  "siedlisko": "",
-  "opis": "",
-  "okres": ""
-},
-{
-    "nazwa":"Modraszka",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/46409481/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553594/mp3",
-        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553595/mp3"
-    ],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Kawka",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/45035361/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/538145/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Wrona siwa",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/261728341/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553565/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Gawron",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44959001/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553554/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Kwiczoł",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/256767691/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552918/mp3",
-        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552920/mp3"
-    ],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Czajka",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/609204339/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552843/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Dzięcioł Duży",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/256154511/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/553480/mp3"
-    ],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Kopciuszek",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44587591/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/538265/mp3",
-        "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552929/mp3"
-    ],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Sierpówka",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/308119951/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/535404/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Pustułka",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/256164041/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552882/mp3","https://cdn.download.ams.birds.cornell.edu/api/v2/asset/541037/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-{
-    "nazwa":"Oknówka",
-    "jpg": "https://cdn.download.ams.birds.cornell.edu/api/v2/asset/258242941/900",
-    "spiew":["https://cdn.download.ams.birds.cornell.edu/api/v2/asset/552913/mp3","https://cdn.download.ams.birds.cornell.edu/api/v2/asset/527675/mp3"],
-    "siedlisko": "",
-    "opis": "",
-    "okres": ""
-},
-// {
-//     "nazwa":"",
-//     "jpg": "",
-//     "spiew":[""],
-//     "siedlisko": "",
-//     "opis": "",
-//     "okres": ""
-// },
-// {
-//     "nazwa":"",
-//     "jpg": "",
-//     "spiew":[""],
-//     "siedlisko": "",
-//     "opis": "",
-//     "okres": ""
-// },
-  
-]
+	{
+		nazwa: "Bogatka",
+		nazwaENG: "Great Tit",
+		nazwaLat: "Parus major",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Great_tit_side-on.jpg/1024px-Great_tit_side-on.jpg",
+		autorJPG:
+			"By © Francis C. Franklin / CC-BY-SA-3.0, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=35923539",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC941807-Kj%C3%B8ttmeis-XC-3--Refsaltjernet--Stange--Elias-A.-Ryberg20200420082752_096.mp3",
 
+			"xeno-canto.org/sounds/uploaded/RGSEIIJGHA/XC944764-GreatTiT_RoodKlooster_241102_3948_edited.mp3",
 
-
+			"xeno-canto.org/sounds/uploaded/QOTPSPWUVH/XC949406-Topmejse-48-2024-11-11-birdnet-13_55_52_filt.mp3",
+		],
+		autorzyDzwiekow: ["Elias A. Ryberg", "Bram Piot", "Steen Knarberg"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Kos",
+		nazwaENG: "Blackbird",
+		nazwaLat: "Turdus merula",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%28Turdus_merula%2C_mas%29%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg/1024px-%D0%A7%D1%91%D1%80%D0%BD%D1%8B%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%28Turdus_merula%2C_mas%29%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg",
+		autorJPG:
+			"Autorstwa Dion Art - Praca własna, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=129779688",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC949876-Svarttrost-XC-%C3%98vre-Rindal-utvalg-5-Elias-A.Ryberg20240618112336_003.mp3",
+			"xeno-canto.org/sounds/uploaded/YHOCFQHBDL/XC950864-Blackbird.2024.11.04%281845%29.Sweetwater.F3%2BBP4025.mp3",
+			"xeno-canto.org/sounds/uploaded/PRVFBYIQYZ/XC955326-turdus-merula-5-hide-pinzon-real-02-01-2020.mp3",
+		],
+		autorzyDzwiekow: ["Elias A. Ryberg", "David Boyle", "Esperanza Poveda"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Raniuszek",
+		nazwaENG: "Long-tailed Tit",
+		nazwaLat: "Aegithalos caudatus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Aegithalos_caudatus_Apley_2.jpg/1024px-Aegithalos_caudatus_Apley_2.jpg",
+		autorJPG:
+			"Autorstwa David Friel from Telford, England - Long-tailed Tit #2, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=8924528",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/FFFADKCCII/XC572456-ltt-D62.mp3",
+			"xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC524302-AB-213%20raniuszek%20super%20%282%29.mp3",
+		],
+		autorzyDzwiekow: ["Simon Elliott", "Jarek Matusiak"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Rudzik",
+		nazwaENG: "European Robin",
+		nazwaLat: "Erithacus rubecula",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/LELYWQKUZX/XC946409-Erithacus-rubecula-ssp-1015_081932-3-2-AA.mp3",
+			"xeno-canto.org/sounds/uploaded/SDXDGURYIO/XC954699-29.9.2024-Pettirosso-ticchettio-LOUD.mp3"],
+		autorzyDzwiekow: ["Albert Lastukhin","Luca Baghino"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Gil",
+		nazwaENG: "Eurasian Bullfinch",
+		nazwaLat: "Pyrrhula pyrrhula",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/NKTQOAXTXA/XC903136-Bouvreuilpivoine_22042024_tourbi%C3%A8redefrasne-18h-chant.mp3",
+			"xeno-canto.org/sounds/uploaded/NKTQOAXTXA/XC903130-Bouvreuilpivoine_21042024_for%C3%AAtsdurisoux-13h-chant.mp3"
+		],
+		autorzyDzwiekow: ["Corentin Rivière","	Corentin Rivière"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Modraszka",
+		nazwaENG: "Eurasian Blue Tit",
+		nazwaLat: "Cyanistes caeruleus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/LHCOINSOBZ/XC936541-240929_0076Ferreiri%C3%B1o-calls--10.30-sisalde.mp3",
+			"xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC928264-JAREK-MATUSIAK-A-2170-modraszka.mp3"],
+		autorzyDzwiekow: ["Jacobo Ramil Millarengo","Jarek Matusiak"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Kawka",
+		nazwaENG: "Western Jackdaw",
+		nazwaLat: "Coloeus monedula",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/WKUHMYUJSN/XC904570-05-08-2024_7h25_choucas-des-tours.mp3",
+			"xeno-canto.org/sounds/uploaded/JCPKCBKKAQ/XC899039-CORMON_240412_4067_Peysines31.mp3"],
+		autorzyDzwiekow: ["Martin Billard","Olivier SWIFT"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Sikora uboga",
+		nazwaENG: "Marsh Tit",
+		nazwaLat: "Poecile palustris",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC913905-L%C3%B8vmeis-XC--1-Rindalsskogen-Elias-A.Ryberg20240616213443_069.mp3",
+			"xeno-canto.org/sounds/uploaded/CQARALZBNN/XC896673-Entita-Idebo-240417_1615.mp3"],
+		autorzyDzwiekow: ["Elias A. Ryberg","Magnus Wadstein"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Czarnogłówka",
+		nazwaENG: "Willow Tit",
+		nazwaLat: "Poecile montanus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC949799-Granmeis-3-XC-Nes-Ringsaker--Elias-A.Ryberg20241118134607_043.mp3",
+			"xeno-canto.org/sounds/uploaded/DUUYLLTNQS/XC893812-M%C3%A9sange-bor%C3%A9ale-sous-esp%C3%A8ce-montanus-Bois-Sagni%C3%A8res-avril-24-10h45.mp3"],
+		autorzyDzwiekow: ["Elias A. Ryberg", "Falco"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Sosnówka",
+		nazwaENG: "Coal Tit",
+		nazwaLat: "Periparus ater",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/LHCOINSOBZ/XC941462-241012_08-Periparus-ater-song-10.30-Sisalde.mp3",
+			"xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC926975-150414_10B-Svartmes-kungsf%C3%A5gel-tr%C3%A4dkrypare-talgoxe.mp3"],
+		autorzyDzwiekow: ["Jacobo Ramil Millarengo","Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Czubatka",
+		nazwaENG: "Crested Tit",
+		nazwaLat: "Lophophanes cristatus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC926922-Tofsmes_33.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Wrona siwa",
+		nazwaENG: "Hooded Crow",
+		nazwaLat: "Corvus cornix",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/GIFBPTEXWL/XC955798-20241213_LSP5_0267_08_54_54.mp3","xeno-canto.org/sounds/uploaded/GIFBPTEXWL/XC949290-20241115_001_H1e_08_44_49.mp3"],
+		autorzyDzwiekow: ["Johannes Worona","Johannes Worona"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Gawron",
+		nazwaENG: "Rook",
+		nazwaLat: "Corvus frugilegus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/QAJPWEPSTL/XC944398-saatkr1209.mp3",
+			"xeno-canto.org/sounds/uploaded/XIBLXHRPJO/XC929215-corfru-vbo-S4A10222_20240808_061202.mp3"],
+		autorzyDzwiekow: ["Bodo Sonnenburg","Uku Paal"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Kruk",
+		nazwaENG: "Northern Raven",
+		nazwaLat: "Corvus corax",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC943245-JAREK-MATUSIAK-A-2251-kruk-w-locie.mp3",
+			"xeno-canto.org/sounds/uploaded/ZQJCLMBULK/XC952842-626967069.mp3"],
+		autorzyDzwiekow: ["Jarek Matusiak","Scott Crabtree"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Kwiczoł",
+		nazwaENG: "Fieldfare",
+		nazwaLat: "Turdus pilaris",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC936737-Bj%C3%B6rktrast_35.mp3",
+			"xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC841670-160604_07A-sel-Bj%C3%B6rktrast.mp3"],
+		autorzyDzwiekow: ["Lars Edenius", "Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Czajka",
+		nazwaENG: "Northern Lapwing",
+		nazwaLat: "Vanellus vanellus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/JCPKCBKKAQ/XC881982-VANVAN_230419_2742_DAVIAUD85_lim008_CroixGivrand.mp3",
+			"xeno-canto.org/sounds/uploaded/WBZVBDKAUE/XC910724-lapwingtac26.mp3"],
+		autorzyDzwiekow: ["Olivier SWIFT", "Paul Kelly"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Dzięcioł duży",
+		nazwaENG: "Great Spotted Woodpecker",
+		nazwaLat: "Dendrocopos major",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC951564-JAREK-MATUSIAK-A-2241-%282%29-dzi%C4%99cio%C5%82-du%C5%BCy-ed-%282%29.mp3"],
+		autorzyDzwiekow: ["Jarek Matusiak"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Kopciuszek",
+		nazwaENG: "Black Redstart",
+		nazwaLat: "Phoenicurus ochruros",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/NKTQOAXTXA/XC938911-Rougequeuenoir_25042024_coldesaravis-15h-chant.mp3",
+			"xeno-canto.org/sounds/uploaded/DMQLDFORTG/XC934037-Phooch240916OveixM_02.mp3"],
+		autorzyDzwiekow: ["Corentin Rivière","Pere Josa"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Sierpówka",
+		nazwaENG: "Eurasian Collared Dove",
+		nazwaLat: "Streptopelia decaocto",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC951676-JAREK-MATUSIAK-006-%283%29-sierp%C3%B3wka-ed.mp3"],
+		autorzyDzwiekow: ["Jarek Matusiak"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Pustułka",
+		nazwaENG: "Common Kestrel",
+		nazwaLat: "Falco tinnunculus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/RJUNGDNCSJ/XC943742-Faucon_crécerelle_Jura_20_aout_2024.mp3",
+			"xeno-canto.org/sounds/uploaded/OQZFKFTAKD/XC942209-TURMFFALKE,-Rufreihen-im-Fluge---5_02--Hh-Kirchstraße--A--VOC_240710-5665.mp3"],
+		autorzyDzwiekow: ["Frantz Barrault","Beatrix Saadi-Varchmin"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Oknówka",
+		nazwaENG: "House Martin",
+		nazwaLat: "Delichon urbicum",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/ILUHRFXDNU/XC937351-Hirondelle-de-fenetre-auban-56-MG-OS-sep-13-1033-DR0000_2357.mp3",
+			"xeno-canto.org/sounds/uploaded/POVKNQVSGU/XC936596-Delichon-urbicum_call-from-the-nest_270924_Aldeaseca-de-la-Armuña.mp3"],
+		autorzyDzwiekow: ["Manuel Grosselet","	João Tomás"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Mazurek",
+		nazwaENG: "Eurasian Tree Sparrow",
+		nazwaLat: "Passer montanus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/LBWCUENEBH/XC899208-Passer-montanus-montanus-MP-1604-norm-10dB-NR-12dB-NR-600Hz.mp3",
+			"xeno-canto.org/sounds/uploaded/POVKNQVSGU/XC944188-Passer-montanus_call-or-song-near-the-nest_011124_Parque-de-Aldehuela.mp3"],
+		autorzyDzwiekow: ["Geoff Carey", "João Tomás"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Wróbel",
+		nazwaENG: "House Sparrow",
+		nazwaLat: "Passer domesticus",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/POVKNQVSGU/XC953713-Passer-domesticus_calls_301124_Tardáguila_4.mp3"],
+		autorzyDzwiekow: ["João Tomás"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "Passeridae",
+	},
+	{
+		nazwa: "Grzywacz",
+		nazwaENG: "Common Wood Pigeon",
+		nazwaLat: "Columba palumbus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/RNMRWBXEZJ/XC947574-Houtduif%2C-zang%2C-IGS%2C-200524%2C-0700-uur.mp3"],
+		autorzyDzwiekow: ["Joost van Bruggen"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Jerzyk",
+		nazwaENG: "Common Swift",
+		nazwaLat: "Apus apus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/JLAUXQLBHR/XC918622-Tornseglare-%28Apus-apus%29-Kyrkesta-Eriksberg_2024-05-28_XC.mp3"],
+		autorzyDzwiekow: ["Mats Olsson"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Sójka",
+		nazwaENG: "Eurasian Jay",
+		nazwaLat: "Garrulus glandarius",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/XIBLXHRPJO/XC932398-gargla-aiaste-240820_0757.mp3"],
+		autorzyDzwiekow: ["Uku Paal"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Pierwiosnek",
+		nazwaENG: "Common Chiffchaff",
+		nazwaLat: "Phylloscopus collybita",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/JCPKCBKKAQ/XC915024-PHYCOL_240620_4659_PontAudemer27_StUlfrant.mp3","xeno-canto.org/sounds/uploaded/JCPKCBKKAQ/XC908343-PHYCOL_240518_4340_CCPAVR_Routot27_PS27.mp3","xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC921071-Grans%C3%A5ngare_47.mp3"],
+		autorzyDzwiekow: ["Olivier SWIFT","Olivier SWIFT, Hélène CARTAUD","Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Zięba",
+		nazwaENG: "Common Chaffinch",
+		nazwaLat: "Fringilla coelebs",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/LHCOINSOBZ/XC944589-240623_07-Pimpin-song-Bodeira-9.00.mp3","xeno-canto.org/sounds/uploaded/BJAXFFKOML/XC954053-Pinsondesarbres_261124_carollesvauban_09h00_cripos%C3%A9_A.mp3"],
+		autorzyDzwiekow: ["Jacobo Ramil Millarengo","Sonothèque ADVL"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Śmieszka",
+		nazwaENG: "Black-headed Gull",
+		nazwaLat: "Chroicocephalus ridibundus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/VJARXMSBTG/XC954802-LARRID_acrobaties_2_241212_Bou.mp3"],
+		autorzyDzwiekow: ["FREDERIC Lionel"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Szpak",
+		nazwaENG: "Common Starling",
+		nazwaLat: "Sturnus vulgaris",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/XIBLXHRPJO/XC804847-STUVUL-TOOMA-230417_5115.mp3"],
+		autorzyDzwiekow: ["Uku Paal"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Kowalik",
+		nazwaENG: "Eurasian Nuthatch",
+		nazwaLat: "Sitta europaea",
+		jpg: "",
+		autorJPG: "",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/WXEEFPSPJM/XC903714-240321-MP-2408-11h31-id-sittelle.mp3","xeno-canto.org/sounds/uploaded/ITHRUQEQCF/XC938013-Eurasian-Nuthatch_calls_1006_1013.mp3"],
+		autorzyDzwiekow: ["Jack Berteau", "Francesco Sottile"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Dzwoniec",
+		nazwaENG: "European Greenfinch",
+		nazwaLat: "Chloris chloris",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC937275-Gr%C3%B6nfink_48.mp3",
+			"xeno-canto.org/sounds/uploaded/EDRTTPSCEN/XC871738-Verdier-230425-0900-0SA-France-Ponthoile-MixPre-4343.mp3",
+			"xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC789172-Gr%C3%B6nfink_45.mp3"
+		],
+		autorzyDzwiekow: ["Lars Edenius","Alain Malengreau","Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Czyż",
+		nazwaENG: "Eurasian Siskin",
+		nazwaLat: "Spinus spinus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/WNLIDKJKXT/XC871416-Spinus-spinus_SONG_Bordes-de-Buiro_240203_1439_xc.mp3"],
+		autorzyDzwiekow: ["Xavier Riera"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Szczygieł",
+		nazwaENG: "European Goldfinch",
+		nazwaLat: "Carduelis carduelis",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC945796-241104_2675B-Steglits.mp3"],
+		autorzyDzwiekow: ["Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Śpiewak",
+		nazwaENG: "Song Thrush",
+		nazwaLat: "Turdus philomelos",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/YHOCFQHBDL/XC927308-SongThrush.2023.12.02%280500%29Sweetwater.mp3",
+			"xeno-canto.org/sounds/uploaded/MVBSLTSBUW/XC925183-020624_Song-Thrush-song-0648-poss-upload.mp3"
+		],
+		autorzyDzwiekow: ["David Boyle","Lee Alder"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Wilga",
+		nazwaENG: "Eurasian Golden Oriole",
+		nazwaLat: "Oriolus oriolus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/JDDHNKDHCS/XC916003-2024.06.25-07h11-Loriot-chant.mp3",
+			"xeno-canto.org/sounds/uploaded/JJNENFTWPB/XC894509-R00329.mp3"
+		],
+		autorzyDzwiekow: ["Thierry THOMAS","Roman Cheprasov"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Strzyżyk",
+		nazwaENG: "Eurasian Wren",
+		nazwaLat: "Troglodytes troglodytes",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC928304-Troglodytes-troglodytes_240819_063924_00.mp3","xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC947333-241110_2679A-G%C3%A4rdsmyg.mp3"],
+		autorzyDzwiekow: ["Jorge Leitão","	Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Gąsiorek",
+		nazwaENG: "Red-backed Shrike",
+		nazwaLat: "Lanius collurio",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC904308-240518_2154D-T%C3%B6rnskata.mp3"],
+		autorzyDzwiekow: ["Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Pełzacz leśny",
+		nazwaENG: "Eurasian Treecreeper",
+		nazwaLat: "Certhia familiaris",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/NKTQOAXTXA/XC904077-Grimpereaudesbois_21042024_for%C3%AAtdurisoux-10h-chant.mp3"],
+		autorzyDzwiekow: ["Corentin Rivière"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Pełzacz ogrodowy",
+		nazwaENG: "Short-toed Treecreeper",
+		nazwaLat: "Certhia brachydactyla",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC954081-Certhia-Brachydactyla_241209_113954_00~3.mp3"],
+		autorzyDzwiekow: ["Jorge Leitão"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Bocian biały",
+		nazwaENG: "White Stork",
+		nazwaLat: "Ciconia ciconia",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/BJAXFFKOML/XC922887-Cigogneblanche_juv_240724_09H15_cri.mp3","xeno-canto.org/sounds/uploaded/PNYKOPBQBQ/XC943779-CICCIC291024MixPre-006_CLAPING-(2).mp3"],
+		autorzyDzwiekow: ["Sonothèque ADVL", "Jordi Calvet"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Bocian czarny",
+		nazwaENG: "Black Stork",
+		nazwaLat: "Ciconia nigra",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/WIPMNWUHXI/XC421071-Zwooi%28mf%29_Karula_20180408_1824.mp3"],
+		autorzyDzwiekow: ["Livon"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Żuraw",
+		nazwaENG: "Common Crane",
+		nazwaLat: "Grus grus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/POVKNQVSGU/XC953895-Grus-grus_flock-of-100-birds-flying-form-de-pre-dormitory-to-the-dormitory_081224_Azud-de-Riolobos.mp3"],
+		autorzyDzwiekow: ["João Tomás"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+	{
+		nazwa: "Głuszec",
+		nazwaENG: "Western Capercaillie",
+		nazwaLat: "Tetrao urogallus",
+		jpg: "",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/WZIAGHEMKS/XC897708-tuppar.mp3"],
+		autorzyDzwiekow: ["Baltasar Pinheiro"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "",
+	},
+];
 
 function filterBirds(nazwa, listaPtaków) {
-    // Tworzymy pustą tablicę na wynik
-    let wynik = [];
-    
-    // Iterujemy przez tablicę ptaków
-    for (let ptak of listaPtaków) {
-        // Sprawdzamy, czy nazwa ptaka równa się szukanej nazwie 
-        if (ptak.nazwa === nazwa) {
-            wynik.push(ptak);
-            return ptak
-        }
-    }
+	// Tworzymy pustą tablicę na wynik
+	let wynik = [];
+
+	// Iterujemy przez tablicę ptaków
+	for (let ptak of listaPtaków) {
+		// Sprawdzamy, czy nazwa ptaka równa się szukanej nazwie
+		if (ptak.nazwa === nazwa) {
+			wynik.push(ptak);
+			return ptak;
+		}
+	}
 }
 
+function createNewBirdList(listName, newBirdList, oldBirdList) {
+	let a = { name: listName, ptaki: [] };
 
-function createNewBirdList(listName, newBirdList, oldBirdList){
-    
-    let a = { "name" : listName,
-        "ptaki": [], 
-    }
-    
-    
-    for (let i = 0; i < newBirdList.length; i++) {
-        a.ptaki.push(filterBirds(newBirdList[i], oldBirdList)) 
-    }
-    
-    
-    return a
+	for (let i = 0; i < newBirdList.length; i++) {
+		a.ptaki.push(filterBirds(newBirdList[i], oldBirdList));
+	}
+
+	return a;
 }
 
-
-
-
-
-
-const birdList1 = ["Mysikrólik", "Bogatka","Kos","Raniuszek", "Rudzik","Gil"]
-const birdList2 = ["Gil"]
+const birdList1 = ["Bogatka", "Modraszka", "Sikora uboga","Czarnogłówka", "Czubatka", "Sosnówka"];
+const birdList2 = ["Bogatka", "Modraszka", "Pustułka", "Gawron", "Wrona siwa", "Oknówka", "Raniuszek", "Jerzyk", "Wróbel", "Szpak", "Kos", "Kowalik", "Pełzacz ogrodowy"];
 let sets = [];
 
 
-sets.push(createNewBirdList("Ptaki Miasta", birdList1, birds))
-sets.push(createNewBirdList("Test", birdList2, birds))
-
+sets.push(createNewBirdList("Ptaki Miasta", birdList2, birds));
+sets.push(createNewBirdList("Sikory", birdList1, birds));
 
 
 // Własne Zestawy
-let mySets = []
+let mySets = [];
 
-// const birdsString = localStorage.getItem('myBirds');
-// if (birdsString) {
-//     const birdObiekt = JSON.parse(birdsString);
-//     mySets.push(birdObiekt)
-//     console.log(mySets);
-    
-//     console.log(mySets[0].ptaki);
-    
-   
-// } else {
-//     console.log('Obiekt nie został zapisany w localStorage');
-// }
-
+for (let i = 0; i < birds.length; i++) {
+	console.log(birds[i].nazwa);
+	
+	
+}

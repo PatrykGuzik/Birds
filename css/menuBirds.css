@@ -1,0 +1,20 @@
+#birdsMenu{
+    background-color: transparent;
+}
+
+.birdListElement{
+    display: block;
+}
+
+.nameOfBird{
+    font-size: large;
+    display: inline-block;
+}
+
+.audioContainer{
+    display: inline-block;
+}
+
+.authorName{
+    display: inline-block;
+}

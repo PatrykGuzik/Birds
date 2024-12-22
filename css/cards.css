@@ -3,6 +3,7 @@
     text-align: center;
     font-size: 30px;
     margin-top: 10px;
+    color: var(--main-text-color);
 }
 
 
@@ -11,13 +12,13 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    height: 400px;
 }
 
 /* kontener na Karty */
 .contSong{
     display: none;
-    height: 450px;
+    height: 420px;
+    max-width: 300px;
 }
 
 /* Pokazanie pierwszej karty */
@@ -55,19 +56,4 @@
     text-align: center;
 }
 
-.menuBtn{
-    background-color: var(--main-button-color);;
-    color: rgb(10, 10, 90);
-    font-weight: 600;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 20px;
-    font-size: 30px;
-    padding: 10px;
-    border: none;
-    border-radius: 50px; 
-    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
 
-}

@@ -1,8 +1,8 @@
 function getButtonsIKnow(id) {
 	const html = `
       <div class="ifKnow" id="ifKnow${id}">
-          <button class="no" id="iDontKnow${id}">Nie wiem</button>
-          <button class="yes" id="iKnow${id}">Wiem</button>
+          <button class="no" id="iDontKnow${id}"><i class="fa-solid fa-xmark"></i></button>
+          <button class="yes" id="iKnow${id}"><i class="fa-solid fa-check"></i></button>
       </div>
     `;
 	return html;
@@ -14,7 +14,6 @@ function getLastCard() {
 	const html = `
     <div class="repeatCont">
         <button onclick="makeRepeat()">Powtórz</button>
-        <button onclick="getMenu()">Przejdź do menu</button>
     </div>
     `;
 	container.innerHTML = html;
@@ -26,18 +25,13 @@ function getFinishCard() {
 	const html = `
     <div class="finishCont">
         <div class="finishInfo">To już wszystko</div>
-        <button onclick="getMenu()">Przejdź do menu</button>
     </div>
     `;
 	container.innerHTML = html;
 }
 
 function getRandVoice(birdNumber, birdList) {
-  
-
 	if (birdList[birdNumber].spiew.length == 1) {
-    console.log("jest tyklo jeden");
-    
 		return birdList[birdNumber].spiew[0];
 	} else {
 		const randNr = getRandomInt(0, birdList[birdNumber].spiew.length - 1);
@@ -86,7 +80,6 @@ function getSoundsOnPage(birdsList) {
                   `;
 	}
 
-	row += `<button class="menuBtn" onclick="getMenu()">Menu</button>`;
 	cont.innerHTML = row;
 }
 
@@ -186,9 +179,12 @@ function changePage(i) {
 }
 
 function setAudioButton(i) {
+	
 	const audio = document.getElementById(`myAudio${i}`);
 	const toggleButton = document.getElementById(`toggleButton${i}`);
 	const restartButton = document.getElementById(`restartButton${i}`);
+
+
 
 	audio.pause();
 	audio.addEventListener("ended", function () {

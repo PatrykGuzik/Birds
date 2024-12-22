@@ -67,3 +67,15 @@ function showCounter() {
 	const counter = document.getElementById("counter");
 	counter.style.display = "block";
 }
+
+
+function getMenuPanel() {
+	return `
+	<div class="menuPanel">
+		<button id="menuBtn" onclick="getMenu()">
+			<i class="fa-solid fa-house"></i>
+		</button>
+	<div>`
+	
+	
+}

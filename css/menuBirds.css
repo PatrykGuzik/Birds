@@ -12,9 +12,67 @@
 }
 
 .audioContainer{
+    display: flex;
+    align-items: center;
     display: inline-block;
 }
 
 .authorName{
     display: inline-block;
+    color: var(--main-text-color);
+}
+
+.authorCont{
+    display: inline-block;
+}
+
+.authorCont a{
+    margin-left: 5px;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.birdListElement{
+    border: 1px solid black;
+    display: block;
+}
+
+/* Obrazek */
+.imgContainer{
+    background-color: aqua;
+}
+
+.birdListElement img{
+    display: inline;
+    width: 150px;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.birdListElement .nameOfBird{
+    display: inline;
+    color: var(--main-text-color);
+}
+
+
+
+.audioContainer{
+    display: block;
+    width: 100%;
+}
+
+.playBtnList, .restartBtnList{
+    display: inline;
+    background-color: transparent;
+    box-shadow: none;
+    width: 50px;
+}
+
+.audioBtns{
+    display: inline;
+    width: 50px;
+}
+
+.bodyCont:last-child{
+    margin-bottom: 80px;
 }

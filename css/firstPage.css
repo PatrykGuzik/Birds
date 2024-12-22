@@ -4,8 +4,8 @@
 
 }
 .contSong{
-    background-color: white;
-    border-radius: 20px;
+    background-color: var(--card-color);
+    border-radius: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -16,14 +16,13 @@
 }
 
 .check{
-    background-color: aquamarine;
     text-align: center;
     border: 1px solid black;
 }
 
 .next{
-    background-color: var(--background-color); /* Jasny żółty */
-    color: var(--main-text-color); /* Szaro-niebieski */
+    background-color: var(--background-color); 
+    color: var(--main-text-color); 
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -31,21 +30,20 @@
     margin-top: 20px;
     font-size: 20px;
     padding: 10px;
-    border-radius: 50px; 
-    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
+    border-radius: 10px; 
 }
 
-.fa-rotate-left{
+.firstPage .fa-rotate-left{
     font-size: 50px;
-    color: rgb(0, 0, 0);
+    color: var(--main-text-color);
 }
 
-.fa-play, .fa-pause{
+.firstPage .fa-play, .firstPage .fa-pause{
     font-size: 150px;
-    color: rgb(255, 255, 255);
+    color: var(--card-color);
 }
 
-.fa-play{
+.firstPage .fa-play{
     transform: translateX(-5px);
 }
 

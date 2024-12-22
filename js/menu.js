@@ -9,37 +9,81 @@ function getMenu() {
 	showPanel("menu");
 }
 
-
 // Ptaki w Menu
 function getBirds() {
 	const birdsMenu = document.getElementById("birdsMenu");
+	const head = `
+	<h1>Dostępne Ptaki</h1>
+    <div>
+		Wszystkie dostępne ptaki z fotografiami oraz danymi dotyczącymi autorstwa
+	</div>
+	<i class="fa-solid fa-magnifying-glass"></i>
+	<input autocomplete="off" type="text" id="findBird">
+	<div class="bodyCont"></div>
+	`
+	birdsMenu.innerHTML = head;
+
+	const bodyCont = document.querySelector(".bodyCont");
+	bodyCont.innerHTML = getBirdListHTML(birds)
+	
+	showPanel("birdsMenu");
+	playPauseAudio(birds);
+	
+
+	// Wyszukiwanie
+	const inputBird = document.getElementById("findBird")
 	const sortBirds = sortBirdsByName(birds);
 
-	let row = `<h1>Dostępne Ptaki</h1>
-            <div>Wszystkie dostępne ptaki z fotografiami oraz danymi dotyczącymi autorstwa</div>`;
+	inputBird.addEventListener("input", function (e) {
+		const filteredBirds = sortBirds.filter((bird) =>
+			bird.nazwa.toLowerCase().includes(inputBird.value))
+		bodyCont.innerHTML = getBirdListHTML(filteredBirds)
+		playPauseAudio(filteredBirds);
+	})
+
+	
+}
+
+function getBirdListHTML(birdList) {
+	const sortBirds = sortBirdsByName(birdList);
+
+	let row = ``;
 
 	for (let i = 0; i < sortBirds.length; i++) {
 		let song = "";
-        let img = ""
-		let name = `<div class="nameOfBird">${sortBirds[i].nazwa}</div>`
+		let img = "";
+		let name = `<div class="nameOfBird">${sortBirds[i].nazwa}</div>`;
 
-        if (sortBirds[i].jpg != "") {
-            img = `
+		if (sortBirds[i].jpg != "") {
+			img = `
             <img src="${sortBirds[i].jpg}" alt="Opis obrazka" width="100">
-            `
-        }
+            `;
+		}
 
 		for (let j = 0; j < sortBirds[i].spiew.length; j++) {
 			if (sortBirds[i].spiew[0] != "") {
-				console.log(sortBirds[i].nazwa);
-
 				song += `
                 <div class="audioContainer">
-                    <audio controls>
+                    <audio id="myAudio${i}${j}">
                         <source src="https://${sortBirds[i].spiew[j]}" type="audio/mpeg">
                         Twoja przeglądarka nie obsługuje elementu audio.
                     </audio>
-                    <div class="authorName">${sortBirds[i].autorzyDzwiekow[j]}</div>
+
+					<div class="audioBtns">
+						<button class="playBtnList" id="toggleButton${i}${j}"><i class="fas fa-play"></i></button>
+	
+						<button class="restartBtnList" id="restartButton${i}${j}"><i class="fa-solid fa-rotate-left"></i></button>
+					</div>
+					
+					
+
+					<div class="authorCont">
+						<div class="authorName">${sortBirds[i].autorzyDzwiekow[j]}</div>
+						<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><i class="fa-brands fa-creative-commons"></i></a>
+						<a href="https://xeno-canto.org/" target="_blank">xeno-canto</a>
+					</div>
+					
+					
 
                 </div>
             `;
@@ -49,19 +93,25 @@ function getBirds() {
 		}
 
 		row += `
-            <div class="birdListElement">
-                ${img}
-                ${name}
+            <div id="listElement${i}" class="birdListElement">
+				<div class="imgContainer">
+					${img}
+                	${name}
+				</div>
+                
+
                 ${song}
             </div>
             `;
 	}
 
-	row += `<button onclick="getMenu()">Menu</button>`;
-	birdsMenu.innerHTML = row;
+	row += getMenuPanel();
+	return row
 
-	showPanel("birdsMenu");
 }
+
+
+
 
 function getReadyMadeSets() {
 	const readyMadeSets = document.getElementById("readyMadeSets");
@@ -72,7 +122,7 @@ function getReadyMadeSets() {
                  `;
 	}
 
-	row += `<button onclick="getMenu()">Menu</button>`;
+	row += getMenuPanel();
 	readyMadeSets.innerHTML = row;
 
 	showPanel("readyMadeSets");
@@ -80,7 +130,17 @@ function getReadyMadeSets() {
 
 function getMySets() {
 	const mySetsW = document.getElementById("mySets");
-	let row = "";
+	let row = `
+	<div class="addRemoveCont">
+		<button class="addNewSetBtn" onclick="setNewSet()">
+			<i class="fa-solid fa-plus"></i>
+		</button>
+		<button class="removeAllSetsBtn" onclick="removeSets()">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+	</div>
+	
+	`;
 
 	// Odczyt z LOCAL STORAGE
 	const birdsString = localStorage.getItem("myBirds");
@@ -92,7 +152,7 @@ function getMySets() {
 
 		for (let i = 0; i < birdObiekt.length; i++) {
 			row += `
-                <button onclick="getQuiz(mySets[${i}].ptaki)" id="mySets${i}">${birdObiekt[i].name}</button>
+                <button class="setList" onclick="getQuiz(mySets[${i}].ptaki)" id="mySets${i}">${birdObiekt[i].name}</button>
                  `;
 		}
 	} else {
@@ -101,10 +161,8 @@ function getMySets() {
 
 	row += `
       
-      <button onclick="setNewSet()">Dodaj nowy 
-      zestaw</button>
-      <button onclick="removeSets()">Usuń wszystkie zestawy</button>
-      <button onclick="getMenu()">Menu</button>
+      
+		${getMenuPanel()}
       `;
 
 	mySetsW.innerHTML = row;
@@ -148,7 +206,6 @@ function setNewSet() {
 	showPanel("birds");
 
 	const nameOfSet = document.getElementById("nameOfSet");
-	console.log(nameOfSet.value);
 
 	const mySet = [];
 	for (let i = 0; i < birds.length; i++) {
@@ -198,4 +255,32 @@ function checkBird() {
 			hiddenBird.style.display = "block";
 		});
 	}
+}
+
+function playPauseAudio(list) {
+	sortBirds = sortBirdsByName(list);
+
+	for (let i = 0; i < sortBirds.length; i++) {
+		for (let j = 0; j < sortBirds[i].spiew.length; j++) {
+			console.log();
+			const idK = `${i}${j}`;
+			audio = document.getElementById(`myAudio${idK}`);
+			setAudioButton(idK);
+		}
+	}
+}
+
+
+function findBird(){
+	const inputBird = document.getElementById("findBird")
+	const sortBirds = sortBirdsByName(birds);
+
+	inputBird.addEventListener("input", function (e) {
+		
+		const filteredBirds = sortBirds.filter((bird) =>
+			bird.nazwa.toLowerCase().includes(inputBird.value))
+		return filteredBirds
+	})
+
+	
 }

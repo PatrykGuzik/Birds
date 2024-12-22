@@ -1,11 +1,10 @@
 :root {
-    --background-color: #A8D5BA;  
-    --main-button-color: rgb(255, 255, 255);
-    --main-text-color: rgb(10, 10, 90);
-    --second-button-color: green;
-    --card-color: white;
-    
-
+    --background-color: rgb(234, 255, 234);  
+    --main-button-color: rgb(202, 201, 201);
+    --main-text-color: rgb(61, 61, 61);
+    --second-text-color: rgb(61, 61, 61);
+    --second-button-color: rgb(38, 0, 128);
+    --card-color: rgb(202, 201, 201);
   }
 
 body{
@@ -21,7 +20,7 @@ body{
 
 button{
     background-color: var(--main-button-color); /* Jasny żółty */
-    color: #000000; /* Szaro-niebieski */
+    color: var(--main-text-color); /* Szaro-niebieski */
     font-weight: 600;
     width: 90%;
     margin-left: auto;
@@ -31,8 +30,8 @@ button{
     font-size: 30px;
     padding: 10px;
     border: none;
-    border-radius: 50px; 
-    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
+    border-radius: 10px; 
+    /* box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5); */
 }
 
 
@@ -46,12 +45,3 @@ button{
 
 
 
-
-
-
-
-
-.birdListElement{
-    border: 1px solid black;
-    display: block;
-}

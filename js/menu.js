@@ -184,7 +184,7 @@ function setNewSet() {
 	let birdList = ``;
 	for (let i = 0; i < birds.length; i++) {
 		birdList += `
-                    <div class="birdA" id="bird${i}">${birds[i].nazwa}</div>
+                    <div class="birdA" id="bird${i}">${birds[i].nazwa} <i class="fa-solid fa-plus plus"></i></div>
                     `;
 	}
 

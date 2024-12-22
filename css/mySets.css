@@ -17,6 +17,13 @@
     font-size: 20px;
     padding: 10px;
     border-bottom: 1px solid var(--main-text-color);
+    position: relative;
+}
+.plus{
+    position: absolute;
+    right:10px;
+    font-size: 30px;
+    
 }
 
 #mySets .setList{
@@ -28,8 +35,16 @@
 
 
 .birdHidden{
+    background-color: transparent;
+    width: 90%;
+    color:rgb(20, 145, 7);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid var(--main-text-color);
     display: none;
-    color: var(--main-text-color);
 }
 
 .inputContainer{
@@ -68,7 +83,7 @@
 
 .addRemoveCont{
     height: 58px;
-    background-color: var(--card-color);
+    background-color: transparent;
     position: relative;
 }
 
@@ -85,4 +100,11 @@
 .removeAllSetsBtn{
     right:0px;
     color: rgb(198, 26, 0);
+}
+
+/* Ukryte */
+.hiddenBirdsCont{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.071);
 }

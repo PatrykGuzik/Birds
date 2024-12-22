@@ -21,7 +21,7 @@ body{
 button{
     background-color: var(--main-button-color); /* Jasny żółty */
     color: var(--main-text-color); /* Szaro-niebieski */
-    font-weight: 600;
+    font-weight: 400;
     width: 90%;
     margin-left: auto;
     margin-right: auto;

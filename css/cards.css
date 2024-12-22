@@ -30,9 +30,8 @@
 
 .repeatCont button, .finishCont button{
     background-color: var(--main-button-color);; /* Jasny żółty */
-    color: #000000; /* Szaro-niebieski */
+    color: var(--main-text-color); 
     font-weight: 600;
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -40,8 +39,6 @@
     font-size: 30px;
     padding: 10px;
     border: none;
-    border-radius: 50px; 
-    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
 }
 
 .finishInfo{

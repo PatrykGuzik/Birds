@@ -5,7 +5,6 @@
     background-color: transparent;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
 }
 
 
@@ -13,7 +12,7 @@
 .menu button, .readyMadeSets button{
     background-color: var(--main-button-color);;
     color: var(--second-text-color);
-    font-weight: 400;
+    font-weight: 600;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -43,3 +42,31 @@
     bottom: 17px;
 }
 
+.menuLogo{
+    width: 300px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.menuLogo #logo1{
+    font-size: 90px;
+    position: absolute;
+    top:0px;
+    left:30px
+}
+.menuLogo #logo2{
+    font-size: 58px;
+    position: absolute;
+    top:64px;
+    left:50px
+}
+
+.menuLogo img{
+    position: absolute;
+    width: 50px;
+    top:65px;
+    left:240px
+}

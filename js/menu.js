@@ -230,6 +230,10 @@ function setNewSet() {
 			getMySets();
 		} else {
 			const validationInput = document.querySelector(".validationInput");
+			window.scrollTo({
+				top: 0,       // Pozycja pionowa
+				behavior: 'smooth' // Opcjonalnie: płynne przewijanie
+			  });
 
 			validationInput.style.display = "block";
 		}

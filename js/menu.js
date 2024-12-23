@@ -112,7 +112,7 @@ function getBirdListHTML(birdList) {
 
 
 
-
+// Własne zestawy
 function getReadyMadeSets() {
 	const readyMadeSets = document.getElementById("readyMadeSets");
 	let row = "";
@@ -212,8 +212,7 @@ function setNewSet() {
 		const bird = document.getElementById(`bird${i}`);
 
 		bird.addEventListener("click", e => {
-			mySet.push(bird.innerText);
-			console.log(mySet);
+			mySet.push(trimTrailingSpaces(bird.innerText));
 		});
 
 		checkBird();
@@ -222,9 +221,10 @@ function setNewSet() {
 	// Przycisk Zapisz
 	const saveBtn = document.getElementById("saveBtn");
 	saveBtn.addEventListener("click", e => {
-		console.log(nameOfSet.value == "");
 		if (nameOfSet.value != "") {
 			mySets.push(createNewBirdList(nameOfSet.value, mySet, birds));
+			
+
 			localStorage.setItem("myBirds", JSON.stringify(mySets));
 
 			getMySets();

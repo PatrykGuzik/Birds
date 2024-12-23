@@ -1,8 +1,7 @@
 function shuffleArray(arr) {
-	// Przesuwamy elementy w tablicy w sposób losowy (algorytm Fisher-Yates)
 	for (let i = arr.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
-		[arr[i], arr[j]] = [arr[j], arr[i]]; // Zamiana miejscami elementów
+		[arr[i], arr[j]] = [arr[j], arr[i]]; // 
 	}
 	return arr;
 }
@@ -79,3 +78,6 @@ function getMenuPanel() {
 	
 	
 }
+
+// usuwanie zbędnych spacji
+const trimTrailingSpaces = (str) => str.replace(/\s+$/, '');

@@ -31,6 +31,7 @@ function getFinishCard() {
 }
 
 function getRandVoice(birdNumber, birdList) {
+	
 	if (birdList[birdNumber].spiew.length == 1) {
 		return birdList[birdNumber].spiew[0];
 	} else {
@@ -162,7 +163,10 @@ function showNextCard(cardNr, lengthList) {
 
 function getQuiz(birdList) {
 	const shuffle = shuffleArray(birdList);
+	console.log(shuffle);
+	
 	getSoundsOnPage(shuffle);
+
 	check(birdList);
 }
 

@@ -33,18 +33,18 @@
 }
 
 .birdListElement{
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     display: block;
 }
 
 /* Obrazek */
 .imgContainer{
-    background-color: aqua;
+    /* background-color: aqua; */
+    display: inline-block;
 }
 
 .birdListElement img{
     display: inline;
-    width: 150px;
     border-radius: 4px;
     margin: 4px;
 }

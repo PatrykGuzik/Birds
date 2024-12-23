@@ -56,7 +56,7 @@ function getBirdListHTML(birdList) {
 
 		if (sortBirds[i].jpg != "") {
 			img = `
-            <img src="${sortBirds[i].jpg}" alt="Opis obrazka" width="100">
+            <img src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
             `;
 		}
 

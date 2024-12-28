@@ -1,4 +1,5 @@
 let isRepeatBirds1 = true;
+let typeLerning = "sounds"
 let repeatBirds1 = [];
 let repeatBirds2 = [];
 

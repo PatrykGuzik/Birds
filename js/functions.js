@@ -81,3 +81,19 @@ function getMenuPanel() {
 
 // usuwanie zbędnych spacji
 const trimTrailingSpaces = (str) => str.replace(/\s+$/, '');
+
+
+
+// HTML Zestawu
+function getHTMLSet(set, iteration, sets) {
+	return `<div class="checkSetBtnsCont">
+                    <div class="checkSetName">${set[iteration].name}</div>
+
+                    <div class="checkSetBtn">
+                    <button onclick="getQuiz(${sets}[${iteration}].ptaki, type='sounds')" id="set${iteration}"><i class="fa-solid fa-music"></i></button>
+
+                    <button onclick="getQuiz(${sets}[${iteration}].ptaki, type='image')" id="set${iteration}"><i class="fa-solid fa-image"></i></button>
+                    </div>
+                </div>
+                 `
+}

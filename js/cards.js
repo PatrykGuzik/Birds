@@ -31,16 +31,16 @@ function getFinishCard() {
 }
 
 function getRandVoice(birdNumber, birdList) {
-	
 	if (birdList[birdNumber].spiew.length == 1) {
 		return birdList[birdNumber].spiew[0];
 	} else {
 		const randNr = getRandomInt(0, birdList[birdNumber].spiew.length - 1);
-    
+
 		return birdList[birdNumber].spiew[randNr];
 	}
 }
 
+// Nauka Dźwięków
 function getSoundsOnPage(birdsList) {
 	showCounter();
 	showPanel("cards");
@@ -50,12 +50,13 @@ function getSoundsOnPage(birdsList) {
 
 	let row = "";
 	for (let i = 0; i < birdsList.length; i++) {
-
-
 		row += `<div id="c${i}" class="contSong">
                     <div id=firstPage${i} class="firstPage">
                       <audio id="myAudio${i}" preload="metadata">
-                      <source src="https://${getRandVoice(i, birdsList)}" type="audio/mpeg">
+                      <source src="https://${getRandVoice(
+												i,
+												birdsList
+											)}" type="audio/mpeg">
         Your browser does not support the audio element.
                       </audio>
   
@@ -84,12 +85,50 @@ function getSoundsOnPage(birdsList) {
 	cont.innerHTML = row;
 }
 
+// Nauka Obrazów
+function getImagesOnPage(birdsList) {
+	
+	showCounter();
+	showPanel("cards");
+	refreshCounter(1, birdsList.length);
+	const cont = document.getElementById("container1");
+	cont.innerHTML = "";
+
+	let row = "";
+	for (let i = 0; i < birdsList.length; i++) {
+		row += `<div id="c${i}" class="contSong">
+                    <div id=firstPage${i} class="firstPage">
+                      <img class="birdImg" src="${birdsList[i].jpg}" alt="" />
+  
+                    
+                      
+  
+                      
+                      <div class="checkW">
+                    <div id="${i}" 
+                    class="next">
+                    sprawdź
+                    </div>
+                    </div>
+                    </div>
+                    <div id=secondPage${i} class="secondPage">  
+                      <div id="birdName${i}" class="birdName"></div>
+                      ${getButtonsIKnow(i)}
+                    </div>
+                  </div>
+  
+                  `;
+	}
+
+	cont.innerHTML = row;
+}
+
 function refreshCounter(cardNr, listLength) {
 	const counter = document.getElementById("counter");
 	counter.innerHTML = `${cardNr}/${listLength}`;
 }
 
-function check(birdList) {
+function checkSound(birdList) {
 	for (let i = 0; i < birdList.length; i++) {
 		setAudioButton(i);
 
@@ -126,14 +165,52 @@ function check(birdList) {
 		});
 	}
 }
+function checkImage(birdList) {
+	for (let i = 0; i < birdList.length; i++) {
+
+
+		const butt = document.getElementById(i);
+		butt.addEventListener("click", e => {
+			answer = document.getElementById(`birdName${i}`);
+			answer.innerHTML = `
+        <img class="birdImg" src="${birdList[i].jpg}" alt="" />
+        <div>${birdList[i].nazwa}</div>
+        
+        `;
+			changePage(i, 2);
+		});
+
+		const buttIDontKnow = document.getElementById(`iDontKnow${i}`);
+
+		//jeśli odpowiedź jest NIEprawidłowa---------------
+		buttIDontKnow.addEventListener("click", e => {
+			if (isRepeatBirds1) {
+				repeatBirds1.push(birdList[i]);
+			} else {
+				repeatBirds2.push(birdList[i]);
+			}
+
+			showNextCard(i, birdList.length);
+		});
+
+		//jeśli odpowiedź jest prawidłowa-------------------
+		const buttIKnow = document.getElementById(`iKnow${i}`);
+
+		buttIKnow.addEventListener("click", e => {
+			showNextCard(i, birdList.length);
+		});
+	}
+}
 
 function makeRepeat() {
+
+
 	if (isRepeatBirds1) {
 		repeatBirds2 = [];
-		getQuiz(repeatBirds1);
+		getQuiz(repeatBirds1, typeLerning);
 	} else {
 		repeatBirds1 = [];
-		getQuiz(repeatBirds2);
+		getQuiz(repeatBirds2, typeLerning);
 	}
 
 	isRepeatBirds1 = !isRepeatBirds1;
@@ -161,13 +238,20 @@ function showNextCard(cardNr, lengthList) {
 	}
 }
 
-function getQuiz(birdList) {
-	const shuffle = shuffleArray(birdList);
-	console.log(shuffle);
+function getQuiz(birdList, type="sounds") {
+	typeLerning = type;
 	
-	getSoundsOnPage(shuffle);
-
-	check(birdList);
+	const shuffle = shuffleArray(birdList);
+	// getSoundsOnPage(shuffle);
+	// checkSound(birdList);
+	if (type=="sounds") {
+		getSoundsOnPage(shuffle);
+		checkSound(birdList);
+	}else{
+		getImagesOnPage(shuffle);
+		checkImage(birdList);
+	}
+	
 }
 
 //Audio player
@@ -183,12 +267,9 @@ function changePage(i) {
 }
 
 function setAudioButton(i) {
-	
 	const audio = document.getElementById(`myAudio${i}`);
 	const toggleButton = document.getElementById(`toggleButton${i}`);
 	const restartButton = document.getElementById(`restartButton${i}`);
-
-
 
 	audio.pause();
 	audio.addEventListener("ended", function () {

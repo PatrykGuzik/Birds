@@ -45,3 +45,42 @@ button{
 
 
 
+
+.checkSetBtnsCont{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    border-bottom: 1px solid var(--main-text-color);
+    position: relative;
+}
+
+.checkSetName{
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    
+}
+
+.checkSetBtn{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 50%;;
+    right: 0;
+    transform: translate(0,-50%);
+}
+
+.checkSetBtnsCont button{
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+    display: inline;
+    width: 70px;
+    font-size: 40px;
+    
+}

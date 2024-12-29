@@ -1,7 +1,7 @@
 function shuffleArray(arr) {
 	for (let i = arr.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
-		[arr[i], arr[j]] = [arr[j], arr[i]]; // 
+		[arr[i], arr[j]] = [arr[j], arr[i]]; //
 	}
 	return arr;
 }
@@ -67,37 +67,31 @@ function showCounter() {
 	counter.style.display = "block";
 }
 
-
 function getMenuPanel() {
 	return `
 	<div class="menuPanel">
 		<button id="menuBtn" onclick="getMenu()">
 			<i class="fa-solid fa-house"></i>
 		</button>
-	<div>`
-	
-	
+	<div>`;
 }
 
 // usuwanie zbędnych spacji
-const trimTrailingSpaces = (str) => str.replace(/\s+$/, '');
-
-
+const trimTrailingSpaces = str => str.replace(/\s+$/, "");
 
 // HTML Zestawu
-function getHTMLSet(set, iteration, sets, isTrash=false) {
-
+function getHTMLSet(set, iteration, sets, isTrash = false) {
 	let trashCan = `
 		<button class="trashSet hidden" id="trash${iteration}" onclick="removeSet(${iteration})">
 			<i class="fa-solid fa-trash-can"></i>
 		</button>
 	`;
 
-	let thisSets = 'mySets';
+	let thisSets = "mySets";
 
 	if (!isTrash) {
-		trashCan="";
-		thisSets = 'sets';
+		trashCan = "";
+		thisSets = "sets";
 	}
 
 	return `<div class="checkSetBtnsCont">
@@ -118,52 +112,48 @@ function getHTMLSet(set, iteration, sets, isTrash=false) {
 
                     </div>
                 </div>
-                 `
+                 `;
 }
-
-
-
 
 function removeItemByName(data, nameToRemove) {
-    /**
-     * Usuwa element z listy na podstawie wartości klucza 'name'.
-     *
-     * @param {Array} data - Lista obiektów.
-     * @param {string} nameToRemove - Wartość klucza 'name' elementu, który ma zostać usunięty.
-     * @return {Array} - Zaktualizowana lista danych bez usuniętego elementu.
-     */
-    return data.filter(item => item.name !== nameToRemove);
+	/**
+	 * Usuwa element z listy na podstawie wartości klucza 'name'.
+	 *
+	 * @param {Array} data - Lista obiektów.
+	 * @param {string} nameToRemove - Wartość klucza 'name' elementu, który ma zostać usunięty.
+	 * @return {Array} - Zaktualizowana lista danych bez usuniętego elementu.
+	 */
+	return data.filter(item => item.name !== nameToRemove);
 }
-
 
 function removeInfoPanel() {
-	const infoPanel = document.querySelector('.infoPanel')
-	infoPanel.classList.toggle("hidden")
+	const infoPanel = document.querySelectorAll(".infoPanel");
+	infoPanel.forEach(element => {
+		element.classList.toggle("hidden");
+	});
 }
-
 
 function showInfoPanel(iteration, setsW) {
-	const infoPanel = document.querySelector(".infoPanel")
-	infoPanel.classList.toggle("hidden")
+	const infoPanel = document.querySelectorAll(".infoPanel");
 
-	const infoBirdList = document.querySelector(".infoBirdList")
+	infoPanel.forEach(element => {
+		element.classList.toggle("hidden");
 
+		const infoBirdList = document.querySelector(".infoBirdList");
 
-	let infoList = `<div class="setNameInfo">${setsW[iteration].name}</div>`
+		let infoList = `<div class="setNameInfo">${setsW[iteration].name}</div>`;
 
-	for (let i = 0; i < setsW[iteration].ptaki.length; i++) {
-		infoList += `
+		for (let i = 0; i < setsW[iteration].ptaki.length; i++) {
+			infoList += `
 			<li>${setsW[iteration].ptaki[i].nazwa}</li>
-		`
-	}
+		`;
+		}
 
-	let infoListHTML = `<ul>${infoList}</ul>`
+		let infoListHTML = `<ul>${infoList}</ul>`;
 
-	infoBirdList.innerHTML = infoListHTML;
-	console.log(setsW[iteration].name);
-	
+		infoBirdList.innerHTML = infoListHTML;
+	});
 }
-
 
 function getInfoPanel() {
 	return `
@@ -173,5 +163,5 @@ function getInfoPanel() {
 			<i class="fa-solid fa-x"></i>
 		</button>
 		<div class="infoBirdList"></div>
-	</div>`
+	</div>`;
 }

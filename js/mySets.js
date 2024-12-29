@@ -3,7 +3,6 @@
 function getMySets() {
 	const mySetsW = document.getElementById("mySets");
 	let row = `
-	${getInfoPanel()}
 	<div class="addRemoveCont">
 		<button class="addNewSetBtn" onclick="setNewSet()">
 			<i class="fa-solid fa-plus"></i>

@@ -673,6 +673,8 @@ sets.push(createNewBirdList("Sikory", birdList1, birds));
 // Własne Zestawy
 let mySets = [];
 
+// let mySets2 = [];
+
 
 // Wyświetl Wszystkie nazwy ptaków
 // for (let i = 0; i < birds.length; i++) {

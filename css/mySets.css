@@ -98,8 +98,9 @@
 
 
 .removeAllSetsBtn{
-    right:0px;
-    color: rgb(198, 26, 0);
+    right:5px;
+    top: -20px;
+    font-size: 40px;
 }
 
 /* Ukryte */
@@ -107,4 +108,9 @@
     margin-bottom: 20px;
     margin-top: 10px;
     background-color: rgba(0, 0, 0, 0.071);
+}
+
+
+.space{
+    height: 100px;
 }

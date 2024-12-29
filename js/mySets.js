@@ -3,12 +3,13 @@
 function getMySets() {
 	const mySetsW = document.getElementById("mySets");
 	let row = `
+	${getInfoPanel()}
 	<div class="addRemoveCont">
 		<button class="addNewSetBtn" onclick="setNewSet()">
 			<i class="fa-solid fa-plus"></i>
 		</button>
 		<button class="removeAllSetsBtn" onclick="removeSets()">
-			<i class="fa-solid fa-xmark"></i>
+			<i class="fa-solid fa-trash-can"></i>
 		</button>
 	</div>
 	
@@ -21,17 +22,17 @@ function getMySets() {
 	if (birdsString) {
 		const birdObiekt = JSON.parse(birdsString);
 		mySets = birdObiekt;
-        console.log(mySets);
         
 
 		for (let i = 0; i < birdObiekt.length; i++) {
-			row += getHTMLSet(birdObiekt, i, "mySets");
+			row += getHTMLSet(birdObiekt, i, "mySets", true);
 		}
 	} else {
 		console.log("Obiekt nie został zapisany w localStorage");
 	}
 
 	row += `
+		<div class="space"></div>
 		${getMenuPanel()}
       `;
 
@@ -93,6 +94,16 @@ function setNewSet() {
 	saveBtn.addEventListener("click", e => {
 		if (nameOfSet.value != "") {
 			mySets.push(createNewBirdList(nameOfSet.value, mySet, birds));
+
+			// mySets2.push(
+			// 	{ 
+			// 		name: nameOfSet.value,
+			// 		ptaki: mySet 
+			// 	});
+			// console.log(mySets2);
+			
+
+
 			
 
 			localStorage.setItem("myBirds", JSON.stringify(mySets));
@@ -112,10 +123,28 @@ function setNewSet() {
 
 // Przycisk usuwania Zestawów
 function removeSets() {
-	localStorage.clear();
-	mySets = [];
+	const trashCans = document.querySelectorAll(".trashSet");
+	const learnBtn = document.querySelectorAll(".learnBtn")
+	
 
-	getMySets();
+	trashCans.forEach(element => {
+  		element.classList.toggle("hidden");
+	});
+
+	learnBtn.forEach(element => {
+		element.classList.toggle("hidden");
+  });
+
+//   Zmiana koloru przycisku
+
+	const trashBtn = document.querySelector(".removeAllSetsBtn")
+
+	trashBtn.classList.toggle("red");
+
+
+	// localStorage.clear();
+	// mySets = [];
+	// getMySets();
 }
 
 
@@ -147,3 +176,18 @@ function checkBird() {
 		});
 	}
 }
+
+
+function removeSet(i) {
+	const name = mySets[i].name
+	
+	const newData = removeItemByName(mySets, name)
+	console.log(newData);
+	mySets = newData
+	
+	localStorage.setItem("myBirds", JSON.stringify(mySets));
+
+	getMySets();
+}
+
+

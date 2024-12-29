@@ -85,15 +85,93 @@ const trimTrailingSpaces = (str) => str.replace(/\s+$/, '');
 
 
 // HTML Zestawu
-function getHTMLSet(set, iteration, sets) {
+function getHTMLSet(set, iteration, sets, isTrash=false) {
+
+	let trashCan = `
+		<button class="trashSet hidden" id="trash${iteration}" onclick="removeSet(${iteration})">
+			<i class="fa-solid fa-trash-can"></i>
+		</button>
+	`;
+
+	let thisSets = 'mySets';
+
+	if (!isTrash) {
+		trashCan="";
+		thisSets = 'sets';
+	}
+
 	return `<div class="checkSetBtnsCont">
                     <div class="checkSetName">${set[iteration].name}</div>
 
                     <div class="checkSetBtn">
-                    <button onclick="getQuiz(${sets}[${iteration}].ptaki, type='sounds')" id="set${iteration}"><i class="fa-solid fa-music"></i></button>
+                    <button class="learnBtn" onclick="getQuiz(${sets}[${iteration}].ptaki, type='sounds')" id="set${iteration}"><i class="fa-solid fa-music"></i></button>
 
-                    <button onclick="getQuiz(${sets}[${iteration}].ptaki, type='image')" id="set${iteration}"><i class="fa-solid fa-image"></i></button>
+                    <button class="learnBtn"  onclick="getQuiz(${sets}[${iteration}].ptaki, type='image')" id="set${iteration}"><i class="fa-solid fa-image"></i></button>
+
+					<button class="learnBtn"  onclick="showInfoPanel(${iteration}, ${thisSets})" >
+					<i class="fa-solid fa-info"></i>
+					</button>
+
+
+					${trashCan}
+
+
                     </div>
                 </div>
                  `
+}
+
+
+
+
+function removeItemByName(data, nameToRemove) {
+    /**
+     * Usuwa element z listy na podstawie wartości klucza 'name'.
+     *
+     * @param {Array} data - Lista obiektów.
+     * @param {string} nameToRemove - Wartość klucza 'name' elementu, który ma zostać usunięty.
+     * @return {Array} - Zaktualizowana lista danych bez usuniętego elementu.
+     */
+    return data.filter(item => item.name !== nameToRemove);
+}
+
+
+function removeInfoPanel() {
+	const infoPanel = document.querySelector('.infoPanel')
+	infoPanel.classList.toggle("hidden")
+}
+
+
+function showInfoPanel(iteration, setsW) {
+	const infoPanel = document.querySelector(".infoPanel")
+	infoPanel.classList.toggle("hidden")
+
+	const infoBirdList = document.querySelector(".infoBirdList")
+
+
+	let infoList = `<div class="setNameInfo">${setsW[iteration].name}</div>`
+
+	for (let i = 0; i < setsW[iteration].ptaki.length; i++) {
+		infoList += `
+			<li>${setsW[iteration].ptaki[i].nazwa}</li>
+		`
+	}
+
+	let infoListHTML = `<ul>${infoList}</ul>`
+
+	infoBirdList.innerHTML = infoListHTML;
+	console.log(setsW[iteration].name);
+	
+}
+
+
+function getInfoPanel() {
+	return `
+	
+	<div class="infoPanel hidden">
+		<button onclick="removeInfoPanel()">
+			<i class="fa-solid fa-x"></i>
+		</button>
+		<div class="infoBirdList"></div>
+	</div>`
 }

@@ -25,7 +25,7 @@ function getBirds() {
 
 	inputBird.addEventListener("input", function (e) {
 		const filteredBirds = sortBirds.filter((bird) =>
-			bird.nazwa.toLowerCase().includes(inputBird.value))
+			bird.nazwa.toLowerCase().includes(inputBird.value.toLowerCase()))
 		bodyCont.innerHTML = getBirdListHTML(filteredBirds)
 		playPauseAudio(filteredBirds);
 	})

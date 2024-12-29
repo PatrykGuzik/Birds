@@ -10,12 +10,28 @@
     height: 65%;
 }
 
-
-.birdImg{
+.contSong .imgContainer{
     margin-top: 5px;
-    width: 90%; /* Szerokość */
+    position: relative;
+    width: 270px;  /* Szerokość kontenera */
+    height: 180px; /* Wysokość kontenera */
+    border-radius: 10px;
+    overflow: hidden; /* Ukrycie nadmiaru obrazu */
+}
+
+.contSong .birdImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Wyśrodkowanie obrazu */
+    
+    /* Dopasowanie obrazu względem dłuższego boku */
+    width: 100%; /* Domyślnie wypełnia szerokość */
+    height: auto; /* Proporcjonalne skalowanie */
     border-radius: 10px;
 }
+
+
 
 .ifKnow button{
     background-color: transparent;

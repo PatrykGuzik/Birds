@@ -1,5 +1,6 @@
-#birdsMenu{
+.birdsMenu{
     background-color: transparent;
+    padding: 15px;
 }
 
 .birdListElement{

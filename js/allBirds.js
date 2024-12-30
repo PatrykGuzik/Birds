@@ -6,9 +6,12 @@ function getBirds() {
     <div>
 		Wszystkie dostępne ptaki z fotografiami oraz danymi dotyczącymi autorstwa
 	</div>
-	<i class="fa-solid fa-magnifying-glass"></i>
-	<input autocomplete="off" type="text" id="findBird">
-	<div class="bodyCont"></div>
+	<div class="searchBirdCont">
+		<i class="fa-solid fa-magnifying-glass"></i>
+		<input autocomplete="off" type="text" placeholder="Szukaj" id="findBird">
+	</div>
+		<div class="bodyCont"></div>
+	
 	`
 	birdsMenu.innerHTML = head;
 
@@ -41,11 +44,15 @@ function getBirdListHTML(birdList) {
 	for (let i = 0; i < sortBirds.length; i++) {
 		let song = "";
 		let img = "";
+		let author = `
+		<div class="authorIMG">
+		 fot. ${getStringBeforeComma(sortBirds[i].autorJPG)}...
+		</div>`;
 		let name = `<div class="nameOfBird">${sortBirds[i].nazwa}</div>`;
 
 		if (sortBirds[i].jpg != "") {
 			img = `
-            <img src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
+            <img class="imgBtn" onclick="showInfoPanelBird(${i})" src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
             `;
 		}
 
@@ -85,7 +92,10 @@ function getBirdListHTML(birdList) {
             <div id="listElement${i}" class="birdListElement">
 				<div class="imgContainer">
 					${img}
-                	${name}
+					${author}
+				</div>
+				<div class="birdInfoContainer">
+					${name}
 				</div>
                 
 
@@ -97,6 +107,41 @@ function getBirdListHTML(birdList) {
 	row += getMenuPanel();
 	return row
 
+}
+
+
+function showInfoPanelBird(iteration) {
+	const infoPanel = document.querySelector(".infoPanel");
+	const sortBirds = sortBirdsByName(birds);
+	const infoContent = document.querySelector(".infoContent")
+
+
+	infoContent.innerHTML = `
+		<div class="birdNameCont">
+			<div class="birdName">${sortBirds[iteration].nazwa}</div>
+			<div class="birdFamilyName">${sortBirds[iteration].rodzina}</div>
+		</div>
+		<div class="infoImgCont">
+			 <img  src="${sortBirds[iteration].jpg}" alt="">
+			 <span>
+			 	${getStringBeforeComma(sortBirds[iteration].autorJPG)}
+			 
+				<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><i class="fa-brands fa-creative-commons"></i></a>	
+			
+			 <a href="${getStringAfterLastComma(sortBirds[iteration].autorJPG)}" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+			 </span>
+			 
+		</div>
+	`
+
+
+	infoPanel.classList.toggle("hidden");
+
+
+	console.log(sortBirds[iteration]);
+	
+
+	
 }
 
 

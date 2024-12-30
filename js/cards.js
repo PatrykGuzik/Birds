@@ -25,6 +25,9 @@ function getFinishCard() {
 	const html = `
     <div class="finishCont">
         <div class="finishInfo">To już wszystko</div>
+		<button id="menuBtn" onclick="getMenu()">
+			Wróć do menu
+		</button>
     </div>
     `;
 	container.innerHTML = html;
@@ -74,7 +77,8 @@ function getSoundsOnPage(birdsList) {
                     </div>
                     </div>
                     <div id=secondPage${i} class="secondPage">  
-                      <div id="birdName${i}" class="birdName"></div>
+                      <div id="birdName${i}" class="birdName">
+					  </div>
                       ${getButtonsIKnow(i)}
                     </div>
                   </div>

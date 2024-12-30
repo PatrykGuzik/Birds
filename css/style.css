@@ -15,6 +15,12 @@ body{
     font-weight: 600;
 }
 
+.mainContainer{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
   
 
 
@@ -98,12 +104,13 @@ button{
     top: 5%;
     right: 50%;
     background-color: var(--card-color);
-    padding: 10px;
+    padding: 15px;
     width: 90%;
     padding-bottom: 20px;
     z-index: 999;
     transform: translate(50%,0);
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);;
 }
 
 .infoPanel button{

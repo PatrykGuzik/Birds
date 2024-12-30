@@ -29,16 +29,16 @@
 /* ------REPEAT------ */
 
 .repeatCont button, .finishCont button{
-    background-color: var(--main-button-color);; /* Jasny żółty */
+    background-color: var(--main-button-color);
     color: var(--main-text-color); 
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 20px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px;
     border: none;
+    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
 }
 
 .finishInfo{
@@ -51,6 +51,14 @@
     font-size: 30px;
     padding: 10px;
     text-align: center;
+}
+
+.finishCont{
+    margin-top: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 

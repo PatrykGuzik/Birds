@@ -129,17 +129,18 @@ function removeItemByName(data, nameToRemove) {
 function removeInfoPanel() {
 	const infoPanel = document.querySelectorAll(".infoPanel");
 	infoPanel.forEach(element => {
-		element.classList.toggle("hidden");
+		element.classList.add("hidden");
 	});
 }
 
+// Pokazuje Panel z listą ptaków
 function showInfoPanel(iteration, setsW) {
 	const infoPanel = document.querySelectorAll(".infoPanel");
 
 	infoPanel.forEach(element => {
 		element.classList.toggle("hidden");
 
-		const infoBirdList = document.querySelector(".infoBirdList");
+		const infoContent = document.querySelector(".infoContent");
 
 		let infoList = `<div class="setNameInfo">${setsW[iteration].name}</div>`;
 
@@ -151,9 +152,12 @@ function showInfoPanel(iteration, setsW) {
 
 		let infoListHTML = `<ul>${infoList}</ul>`;
 
-		infoBirdList.innerHTML = infoListHTML;
+		infoContent.innerHTML = infoListHTML;
 	});
 }
+
+
+
 
 function getInfoPanel() {
 	return `
@@ -162,6 +166,24 @@ function getInfoPanel() {
 		<button onclick="removeInfoPanel()">
 			<i class="fa-solid fa-x"></i>
 		</button>
-		<div class="infoBirdList"></div>
+		<div class="infoContent"></div>
 	</div>`;
+}
+
+// Zwraca stringa do pierwszego przecinka
+function getStringBeforeComma(input) {
+    if (typeof input !== 'string') {
+        throw new Error('Input must be a string');
+    }
+    const commaIndex = input.indexOf(',');
+    return commaIndex !== -1 ? input.slice(0, commaIndex) : input;
+}
+
+// i po ostatnim
+function getStringAfterLastComma(input) {
+    if (typeof input !== 'string') {
+        throw new Error('Input must be a string');
+    }
+    const lastCommaIndex = input.lastIndexOf(',');
+    return lastCommaIndex !== -1 ? input.slice(lastCommaIndex + 1).trim() : '';
 }

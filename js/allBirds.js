@@ -37,7 +37,7 @@ function getBirds() {
 }
 
 function getBirdListHTML(birdList) {
-	const sortBirds = sortBirdsByName(birdList);
+	let sortBirds = sortBirdsByName(birdList);
 
 	let row = ``;
 
@@ -48,11 +48,19 @@ function getBirdListHTML(birdList) {
 		<div class="authorIMG">
 		 fot. ${getStringBeforeComma(sortBirds[i].autorJPG)}...
 		</div>`;
-		let name = `<div class="nameOfBird">${sortBirds[i].nazwa}</div>`;
+		let name = `
+		<div class="nameOfBird">
+			${sortBirds[i].nazwa}
+		</div>
+		<div class="nameOfFamily">
+			${sortBirds[i].rodzina}
+		</div>
+		
+		`;
 
 		if (sortBirds[i].jpg != "") {
 			img = `
-            <img class="imgBtn" onclick="showInfoPanelBird(${i})" src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
+            <img class="imgBtn" onclick="showInfoPanelBird('${sortBirds[i].nazwa}')" src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
             `;
 		}
 
@@ -110,25 +118,25 @@ function getBirdListHTML(birdList) {
 }
 
 
-function showInfoPanelBird(iteration) {
+function showInfoPanelBird(nazwa) {
 	const infoPanel = document.querySelector(".infoPanel");
-	const sortBirds = sortBirdsByName(birds);
+	const birdToShow = findBirdFromList(birds, nazwa);
 	const infoContent = document.querySelector(".infoContent")
-
+	
 
 	infoContent.innerHTML = `
 		<div class="birdNameCont">
-			<div class="birdName">${sortBirds[iteration].nazwa}</div>
-			<div class="birdFamilyName">${sortBirds[iteration].rodzina}</div>
+			<div class="birdName">${birdToShow.nazwa}</div>
+			<div class="birdFamilyName">${birdToShow.rodzina}</div>
 		</div>
 		<div class="infoImgCont">
-			 <img  src="${sortBirds[iteration].jpg}" alt="">
+			 <img  src="${birdToShow.jpg}" alt="">
 			 <span>
-			 	${getStringBeforeComma(sortBirds[iteration].autorJPG)}
+			 	${getStringBeforeComma(birdToShow.autorJPG)}
 			 
 				<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><i class="fa-brands fa-creative-commons"></i></a>	
 			
-			 <a href="${getStringAfterLastComma(sortBirds[iteration].autorJPG)}" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+			 <a href="${getStringAfterLastComma(birdToShow.autorJPG)}" target="_blank" rel="noopener noreferrer">Wikipedia</a>
 			 </span>
 			 
 		</div>
@@ -137,16 +145,11 @@ function showInfoPanelBird(iteration) {
 
 	infoPanel.classList.toggle("hidden");
 
-
-	console.log(sortBirds[iteration]);
-	
-
-	
 }
 
 
 function playPauseAudio(list) {
-	sortBirds = sortBirdsByName(list);
+	let sortBirds = sortBirdsByName(list);
 
 	for (let i = 0; i < sortBirds.length; i++) {
 		for (let j = 0; j < sortBirds[i].spiew.length; j++) {

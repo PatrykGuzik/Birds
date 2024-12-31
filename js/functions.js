@@ -57,6 +57,17 @@ function sortBirdsByName(birds) {
 		return 0; // jeśli są równe
 	});
 }
+function sortBirdsByFamily(birds) {
+	return birds.sort((a, b) => {
+		if (a.rodzina < b.rodzina) {
+			return -1; 
+		}
+		if (a.rodzina > b.rodzina) {
+			return 1; 
+		}
+		return 0; 
+	});
+}
 
 function hiddCounter() {
 	const counter = document.getElementById("counter");
@@ -186,4 +197,10 @@ function getStringAfterLastComma(input) {
     }
     const lastCommaIndex = input.lastIndexOf(',');
     return lastCommaIndex !== -1 ? input.slice(lastCommaIndex + 1).trim() : '';
+}
+
+
+// zwraca Ptaka po nazwie
+function findBirdFromList(birdList, name) {
+    return birdList.find(bird => bird.nazwa === name) || null;
 }

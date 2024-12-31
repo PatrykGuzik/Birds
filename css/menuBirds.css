@@ -7,11 +7,6 @@
     display: block;
 }
 
-.nameOfBird{
-    font-size: 23px;
-    display: inline-block;
-    margin-left: 5px;
-}
 
 .audioContainer{
     display: flex;
@@ -77,7 +72,7 @@
 .birdInfoContainer{
     display: inline-block;
     position: absolute;
-
+    
 }
 
 .birdInfoContainer .nameOfBird{
@@ -110,9 +105,24 @@
 }
 
 
+
+
+
+.nameOfBird{
+    font-size: 23px;
+    display: inline-block;
+    margin-left: 5px;
+}
+.nameOfFamily{
+    display: block;
+    margin-left: 5px;
+    font-weight: 200;
+}
+
 /* Info Panel Content */
 .birdNameCont{
     position: absolute;
+    
     top: 5px;
 }
 

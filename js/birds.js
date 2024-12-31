@@ -212,7 +212,7 @@ const birds = [
 		nazwaENG: "Northern Raven",
 		nazwaLat: "Corvus corax",
 		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Corvus_corax_%28NPS%29.jpg/1024px-Corvus_corax_%28NPS%29.jpg",
-		autorJPG: "National Park Service - http://www.nps.gov/brca/images/raven300.jpg, Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=119884",
+		autorJPG: "National Park Service - www.nps.gov, Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=119884",
 		spiew: [
 			"xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC943245-JAREK-MATUSIAK-A-2251-kruk-w-locie.mp3",
 			"xeno-canto.org/sounds/uploaded/ZQJCLMBULK/XC952842-626967069.mp3"],
@@ -322,7 +322,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "jaskółkowate",
 	},
 	{
 		nazwa: "Mazurek",
@@ -337,7 +337,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "wróble",
 	},
 	{
 		nazwa: "Wróbel",
@@ -351,7 +351,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "Passeridae",
+		rodzina: "wróble",
 	},
 	{
 		nazwa: "Grzywacz",
@@ -364,7 +364,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "gołębiowate",
 	},
 	{
 		nazwa: "Jerzyk",
@@ -377,7 +377,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "jerzykowate",
 	},
 	{
 		nazwa: "Sójka",
@@ -390,7 +390,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "krukowate",
 	},
 	{
 		nazwa: "Pierwiosnek",
@@ -403,7 +403,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "świstunki",
 	},
 	{
 		nazwa: "Zięba",
@@ -417,7 +417,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "łuszczakowate",
 	},
 	{
 		nazwa: "Śmieszka",
@@ -430,20 +430,20 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "mewowate",
 	},
 	{
 		nazwa: "Szpak",
 		nazwaENG: "Common Starling",
 		nazwaLat: "Sturnus vulgaris",
-		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/An_European_Starling_on_the_ground.jpg/1024px-An_European_Starling_on_the_ground.jpg",
-		autorJPG: "Deepak Sundar, - https://www.instagram.com/p/CADMO5EIJG3/, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=90194469",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Ab_bird_025.jpg/1024px-Ab_bird_025.jpg",
+		autorJPG: "Andrew Butko, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4047010",
 		spiew: ["xeno-canto.org/sounds/uploaded/XIBLXHRPJO/XC804847-STUVUL-TOOMA-230417_5115.mp3"],
 		autorzyDzwiekow: ["Uku Paal"],
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "szpakowate",
 	},
 	{
 		nazwa: "Kowalik",
@@ -457,7 +457,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "kowaliki",
 	},
 	{
 		nazwa: "Dzwoniec",
@@ -473,7 +473,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "łuszczakowate",
 	},
 	{
 		nazwa: "Czyż",
@@ -486,7 +486,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "łuszczakowate",
 	},
 	{
 		nazwa: "Szczygieł",
@@ -499,7 +499,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "łuszczakowate",
 	},
 	{
 		nazwa: "Śpiewak",
@@ -514,7 +514,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "drozdowate",
 	},
 	{
 		nazwa: "Wilga",
@@ -529,7 +529,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "wilgowate",
 	},
 	{
 		nazwa: "Strzyżyk",
@@ -542,7 +542,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "strzyżyki",
 	},
 	{
 		nazwa: "Gąsiorek",
@@ -555,7 +555,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "dzierzby",
 	},
 	{
 		nazwa: "Pełzacz leśny",
@@ -568,7 +568,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "pełzacze",
 	},
 	{
 		nazwa: "Pełzacz ogrodowy",
@@ -581,7 +581,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "pełzacze",
 	},
 	{
 		nazwa: "Bocian biały",
@@ -620,7 +620,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "żurawie",
 	},
 	{
 		nazwa: "Głuszec",
@@ -633,7 +633,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: "",
+		rodzina: "kurowate",
 	},
 ];
 

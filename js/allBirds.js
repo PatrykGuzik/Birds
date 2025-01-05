@@ -4,7 +4,7 @@ function getBirds() {
 	const head = `
 	<h1>Dostępne Ptaki</h1>
     <div>
-		Wszystkie dostępne ptaki z fotografiami oraz danymi dotyczącymi autorstwa
+		${birds.length} ptaków
 	</div>
 	<div class="searchBirdCont">
 		<i class="fa-solid fa-magnifying-glass"></i>

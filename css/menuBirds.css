@@ -40,8 +40,8 @@
     display: inline-block;
     margin-top: 5px;
     position: relative;
-    width: 200px;  /* Szerokość kontenera */
-    height: 130px; /* Wysokość kontenera */
+    width: 150px;  /* Szerokość kontenera */
+    height: 90px; /* Wysokość kontenera */
     border-radius: 10px;
     overflow: hidden; /* Ukrycie nadmiaru obrazu */
 }

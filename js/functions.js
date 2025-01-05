@@ -139,6 +139,7 @@ function removeItemByName(data, nameToRemove) {
 
 function removeInfoPanel() {
 	const infoPanel = document.querySelectorAll(".infoPanel");
+	stopAllMediaPlayers()
 	infoPanel.forEach(element => {
 		element.classList.add("hidden");
 	});
@@ -157,11 +158,20 @@ function showInfoPanel(iteration, setsW) {
 
 		for (let i = 0; i < setsW[iteration].ptaki.length; i++) {
 			infoList += `
-			<li>${setsW[iteration].ptaki[i].nazwa}</li>
+			<li>
+				<div class="contListImg">
+				 	<img  src="${
+					getImgByName(setsW[iteration].ptaki[i].nazwa)
+					}" alt="">
+				</div>
+				${setsW[iteration].ptaki[i].nazwa}
+			
+			</li>
 		`;
 		}
 
-		let infoListHTML = `<ul>${infoList}</ul>`;
+		let infoListHTML = `<ul>${infoList}</ul>
+		<br><br><br>`;
 
 		infoContent.innerHTML = infoListHTML;
 	});
@@ -204,3 +214,10 @@ function getStringAfterLastComma(input) {
 function findBirdFromList(birdList, name) {
     return birdList.find(bird => bird.nazwa === name) || null;
 }
+
+
+function getImgByName(name) {
+	const bird = findBirdFromList(birds, name)
+	return bird.jpg
+}
+

@@ -100,15 +100,15 @@ button{
 
 /* Info panel */
 .infoPanel{
-    position: fixed;
-    top: 5%;
-    right: 50%;
+    position:absolute;
+    /* top: 5%;
+    right: 50%; */
     background-color: var(--card-color);
     padding: 15px;
     width: 90%;
     padding-bottom: 20px;
     z-index: 999;
-    transform: translate(50%,0);
+    /* transform: translate(50%,0); */
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);;
 }
@@ -138,4 +138,65 @@ button{
     position: absolute;
     top: 13px;
     font-size: 30px;
+}
+
+.contListImg{
+    display: inline-block;
+    margin-top: 5px;
+    position: relative;
+    width: 80px;  /* Szerokość kontenera */
+    height: 50px; /* Wysokość kontenera */
+    border-radius: 10px;
+    overflow: hidden; /* Ukrycie nadmiaru obrazu */
+}
+
+.contListImg img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Wyśrodkowanie obrazu */
+    /* Dopasowanie obrazu względem dłuższego boku */
+    width: 100%; /* Domyślnie wypełnia szerokość */
+    height: auto; /* Proporcjonalne skalowanie */
+    border-radius: 10px;
+}
+
+
+
+
+/* INFO PANEL BIRD */
+
+
+
+.infoPanelBird{
+    position:fixed;
+    right: -100%;
+    background-color: var(--background-color);
+    padding: 15px;
+    width: 90%;
+    height: 100vh;
+    padding-bottom: 20px;
+    z-index: 999;
+    border-radius: 10px;
+    transition: right 0.25s ease;
+}
+.showInfoBird{
+    right: 0;
+}
+.infoPanelBird button{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    margin-left: auto;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    box-shadow: none;
+    font-size: 30px;
+}
+
+
+@keyframes example {
+    from {transform: translate(0,0); }
+    to {transform: translate(-100%,0); }
 }

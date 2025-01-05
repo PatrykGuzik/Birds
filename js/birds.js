@@ -635,7 +635,97 @@ const birds = [
 		okres: "",
 		rodzina: "kurowate",
 	},
+	{
+		nazwa: "Gołąb skalny",
+		nazwaENG: "Rock Dove",
+		nazwaLat: "Columba livia",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Pigeon_shot.jpg/480px-Pigeon_shot.jpg",
+		autorJPG: "Siva301in, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=22869071",
+		spiew: ["xeno-canto.org/sounds/uploaded/CRSGYUOPGR/XC777163-paloma.mp3"],
+		autorzyDzwiekow: ["SonoNatura"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "gołębiowate",
+	},
+	{
+		nazwa: "Sroka",
+		nazwaENG: "Eurasian Magpie",
+		nazwaLat: "Pica pica",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Pica_pica_-_Compans_Caffarelli_-_2012-03-16.jpg/1024px-Pica_pica_-_Compans_Caffarelli_-_2012-03-16.jpg",
+		autorJPG: "Pierre-Selim, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=19400996",
+		spiew: ["xeno-canto.org/sounds/uploaded/GIFBPTEXWL/XC952664-20241127_001_H1e_08_01_51.mp3"],
+		autorzyDzwiekow: ["Johannes Worona"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "krukowate",
+	},
+	{
+		nazwa: "Pliszka siwa",
+		nazwaENG: "White Wagtail",
+		nazwaLat: "Motacilla alba",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/White_wagtail_%28Motacilla_alba%29.jpg/1280px-White_wagtail_%28Motacilla_alba%29.jpg",
+		autorJPG: "Hobbyfotowiki, CC0, https://commons.wikimedia.org/w/index.php?curid=85186441",
+		spiew: ["xeno-canto.org/sounds/uploaded/LHCOINSOBZ/XC956443-241221_01.-M-alba-alba-canto-call-walking-on-the-mudflat-13.00-mp3.mp3","xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC946837-200529_15_16_01D-S%C3%A4des%C3%A4rla.mp3"],
+		autorzyDzwiekow: ["Jacobo Ramil Millarengo","Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "pliszkowate",
+	},
+
+	{
+		nazwa: "Trznadel",
+		nazwaENG: "Yellowhammer",
+		nazwaLat: "Emberiza citrinella",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Emberiza_citrinella_-New_Zealand_-North_Island-8.jpg",
+		autorJPG: "Alan Vernon, North Island, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=8787510",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/LHCOINSOBZ/XC919933-240707_03-E-citrinella-song-pino-8.30--58dB-Xestoso.mp3",
+			"xeno-canto.org/sounds/uploaded/XIBLXHRPJO/XC909945-EMBCIT-H-RISTNA-240513_0456.mp3"],
+		autorzyDzwiekow: ["Jacobo Ramil Millarengo","Uku Paal"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "trznadle",
+	},
+	{
+		nazwa: "Krogulec",
+		nazwaENG: "Eurasian Sparrowhawk",
+		nazwaLat: "Accipiter nisus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/3/33/Havik.jpg",
+		autorJPG: "Mweilie3, Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=4873087",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/GYAUIPUVNM/XC905385-aCCIPITER-NISUS_240522_120552_00.mp3", 
+			"xeno-canto.org/sounds/uploaded/PAEQEUHPFQ/XC740850-Sparrowhawk_Calls_Rostellan_250722_A_2.mp3"],
+		autorzyDzwiekow: ["Jorge Leitão", "Irish Wildlife Sounds"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate",
+	},
+	// {
+	// 	nazwa: "",
+	// 	nazwaENG: "",
+	// 	nazwaLat: "",
+	// 	jpg: "",
+	// 	autorJPG: "",
+	// 	spiew: [""],
+	// 	autorzyDzwiekow: [""],
+	// 	siedlisko: "",
+	// 	opis: "",
+	// 	okres: "",
+	// 	rodzina: "",
+	// },
+
 ];
+
+
+
+
+
+
 
 function filterBirds(nazwa, listaPtaków) {
 	// Tworzymy pustą tablicę na wynik
@@ -661,13 +751,59 @@ function createNewBirdList(listName, newBirdList, oldBirdList) {
 	return a;
 }
 
+// Sikory
 const birdList1 = ["Bogatka", "Modraszka", "Sikora uboga","Czarnogłówka", "Czubatka", "Sosnówka"];
-const birdList2 = ["Bogatka", "Modraszka", "Pustułka", "Gawron", "Wrona siwa", "Oknówka", "Raniuszek", "Jerzyk", "Wróbel", "Szpak", "Kos", "Kowalik", "Pełzacz ogrodowy"];
+
+// Dodać Piecuszek Pierwiosnek Pleszka Kapturka Piegża Dymówka Zięba
+// Ptaki Miasta 1
+const birdList2 = ["Bogatka", "Gołąb skalny", "Wróbel", "Mazurek", "Sroka", "Kawka", "Kos", "Szpak", "Jerzyk", "Dzięcioł duży"];
+
+// Ptaki Miasta 2
+const birdList3 = ["Grzywacz", "Śmieszka", "Kopciuszek", "Pliszka siwa", "Rudzik", "Kowalik", "Sójka", "Pustułka", "Wrona siwa", "Gawron"]
+
+// Ptaki Miasta 3
+const birdList4 = ["Sierpówka", "Dzwoniec", "Oknówka", "Modraszka", "Pełzacz ogrodowy", "Strzyżyk", "Trznadel", "Kwiczoł", "Szczygieł", "Krogulec"]
+
+// Siewki
+const birdList5 = ["Czajka", "Kszyk", "Słonka", "Krwawodziób", "Łęczak", "Samotnik", "Rycyk", "Szlamnik", "Sieweczka Rzeczna", "Sieweczka Obrożna"]
+
+// Kaczki i Łabędzie
+const birdList6 = ["Krzyżówka", "Krakwa", "Cyranka", "Cyraneczka", "Świstun", "Płaskonos", "Rożeniec", "Łąbędź Niemy", "Łabędź Krzykliwy", "Łabędź Czarnodzioby"]
+
+// Gęsi
+const birdList7 = ["Gęgawa", "Gęś Zbożowa", "Gęś Tundrowa", "Gęś Białoczelna", "Gęś Mała", "Gęś Krótkodzioba", "Bernikla Kanadyjska", "Bernikla Białoszyja", "Bernikla Obrożna"]
+
+// Szponiaste
+const birdList8 = ["Myszołów", "Myszołów Włochaty", "Trzmielojad", "Jastrząb", "Krogulec", "Błotniak Stawowy", "Błotniak Łąkowy", "Błotniak Zbożowy", "Kania Ruda", "Kania Czarna"
+]
+
+// Mewy
+const birdlist9 = ["Śmieszka", "Mewa Mała", "Mewa Trójpalczasta", "Mewa Siwa", "Mewa Srebrzysta", "Mewa Żółtonoga", "Mewa Siodłata", "Mewa Polarna", "Mewa Blada"]
+
+// Dzięcioły
+const birdlist10 = ["Dzięciołek", "Dzięcioł Średni", "Dzięcioł Duży", "Dzięcioł Białoszyi", "Dzięcioł Białogrzbiety", "Dzięcioł Zielony", "Dzięcioł Zielonosiwy", "Dzięcioł Czarny", "Dzięcioł Trójpalczasty"]
+
+// Krukowate
+const birdlist11 = ["Wrona", "Czarnowron", "Kawka", "Gawron", "Kruk", "Sójka", "Sroka", "Orzechówka"]
+
+// Sowy
+const birdlist12 = ["Puszczyk", "Puszczyk Uralski", "Puszczyk Mszarny", "Uszatka", "Uszatka Błotna", "Płomykówka", "Pójdźka", "Sóweczka", "Włochatka", "Puchacz"]
+
+// ---------------------------------------
 let sets = [];
+// Ptaki Miasta
+sets.push(createNewBirdList("Ptaki Miasta 1", birdList2, birds));
+sets.push(createNewBirdList("Ptaki Miasta 2", birdList3, birds));
+sets.push(createNewBirdList("Ptaki Miasta 3", birdList4, birds));
 
 
-sets.push(createNewBirdList("Ptaki Miasta", birdList2, birds));
+
+
+// Sikory
 sets.push(createNewBirdList("Sikory", birdList1, birds));
+
+// Losowe Ptaki
+sets.push(createNewBirdList("10 losowych", getRandomBirds(10, birds), birds))
 
 
 // Własne Zestawy
@@ -680,3 +816,16 @@ let mySets = [];
 // for (let i = 0; i < birds.length; i++) {
 // 	console.log(birds[i].nazwa);
 // }
+
+
+function getRandomBirds(numberOfBirds, birdsList) {
+	const randBirdsList = shuffleArray(birdsList)
+	let newBirdRandList = []
+
+	for (let i = 0; i < numberOfBirds; i++) {
+		newBirdRandList.push(randBirdsList[i].nazwa)
+	}
+	return newBirdRandList
+}
+
+

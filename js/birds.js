@@ -737,45 +737,48 @@ const birds = [
 		okres: "",
 		rodzina: "muchołówkowate",
 	},
-	// {
-	// 	nazwa: "Kapturka",
-	// 	nazwaENG: "",
-	// 	nazwaLat: "",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: "",
-	// },
-	// {
-	// 	nazwa: "Piegża",
-	// 	nazwaENG: "",
-	// 	nazwaLat: "",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: "",
-	// },
-	// {
-	// 	nazwa: "Dymówka",
-	// 	nazwaENG: "",
-	// 	nazwaLat: "",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: "",
-	// },
+	{
+		nazwa: "Kapturka",
+		nazwaENG: "Eurasian Blackcap",
+		nazwaLat: "Sylvia atricapilla",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Curruca_Capirotada.%28_Sylvia_atricapilla_heineken%29%28%E2%99%82%29_%285215354550%29.jpg/1024px-Curruca_Capirotada.%28_Sylvia_atricapilla_heineken%29%28%E2%99%82%29_%285215354550%29.jpg",
+		autorJPG: "Juan Emilio, España - Curruca Capirotada.( Sylvia atricapilla heineken)(♂)Uploaded by tm, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=27642625",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/VKDRQJVNMQ/XC952802-Fauvette-TN.mp3",
+			"xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC941826-Munk-3-XC-H%C3%B8sbj%C3%B8r-Elias-A.Ryberg20240512145256_049.mp3",
+			"xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC930521-060824_005_Syl.atr.mp3"],
+		autorzyDzwiekow: ["François Guibert", "Elias A. Ryberg", "Romuald Mikusek"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "pokrzewki",
+	},
+	{
+		nazwa: "Piegża",
+		nazwaENG: "Lesser Whitethroat",
+		nazwaLat: "Curruca curruca",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/d/df/Lesserwhitethroat.jpg",
+		autorJPG: "Henrike Mühlichen, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9524826",
+		spiew: ["xeno-canto.org/sounds/uploaded/LKSFUYYSUK/XC942824-190514_24A-sel-%C3%84rts%C3%A5ngare.mp3"],
+		autorzyDzwiekow: ["Ulf Elman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "pokrzewki",
+	},
+	{
+		nazwa: "Dymówka",
+		nazwaENG: "Barn Swallow",
+		nazwaLat: "Hirundo rustica",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%28Hirundo_rustica%29%2C_%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE.jpg/606px-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%28Hirundo_rustica%29%2C_%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE.jpg",
+		autorJPG: "Dion Art, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=133079767",
+		spiew: ["xeno-canto.org/sounds/uploaded/EUNWJADFAF/XC934498-hirrus170924_Kaskinen-satama.mp3"],
+		autorzyDzwiekow: ["Aku Kalliomäki"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jaskółkowate",
+	},
 	// {
 	// 	nazwa: "",
 	// 	nazwaENG: "",
@@ -825,15 +828,15 @@ function createNewBirdList(listName, newBirdList, oldBirdList) {
 // Sikory
 const birdList1 = ["Bogatka", "Modraszka", "Sikora uboga","Czarnogłówka", "Czubatka", "Sosnówka"];
 
-// Dodać Piecuszek Pierwiosnek Pleszka Kapturka Piegża Dymówka Zięba
+// Dodać  Pierwiosnek Pleszka Kapturka Piegża Dymówka Zięba
 // Ptaki Miasta 1
-const birdList2 = ["Bogatka", "Gołąb skalny", "Wróbel", "Mazurek", "Sroka", "Kawka", "Kos", "Szpak", "Jerzyk", "Dzięcioł duży"];
+const birdList2 = ["Bogatka", "Gołąb skalny", "Wróbel", "Mazurek", "Sroka", "Kawka", "Kos", "Szpak", "Jerzyk", "Dzięcioł duży", "Piecuszek", "Pierwiosnek"];
 
 // Ptaki Miasta 2
-const birdList3 = ["Grzywacz", "Śmieszka", "Kopciuszek", "Pliszka siwa", "Rudzik", "Kowalik", "Sójka", "Pustułka", "Wrona siwa", "Gawron"]
+const birdList3 = ["Grzywacz", "Śmieszka", "Kopciuszek", "Pliszka siwa", "Rudzik", "Kowalik", "Sójka", "Pustułka", "Wrona siwa", "Gawron","Pleszka", "Kapturka"]
 
 // Ptaki Miasta 3
-const birdList4 = ["Sierpówka", "Dzwoniec", "Oknówka", "Modraszka", "Pełzacz ogrodowy", "Strzyżyk", "Trznadel", "Kwiczoł", "Szczygieł", "Krogulec"]
+const birdList4 = ["Sierpówka", "Dzwoniec", "Oknówka", "Modraszka", "Pełzacz ogrodowy", "Strzyżyk", "Trznadel", "Kwiczoł", "Szczygieł", "Krogulec", "Piegża","Dymówka"]
 
 // Siewki
 const birdList5 = ["Czajka", "Kszyk", "Słonka", "Krwawodziób", "Łęczak", "Samotnik", "Rycyk", "Szlamnik", "Sieweczka Rzeczna", "Sieweczka Obrożna"]

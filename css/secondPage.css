@@ -12,7 +12,7 @@
     height: 65%;
 }
 
-.contSong .imgContainer{
+.contSong .imgContainer, .contImage .imgContainer{
     margin-top: 5px;
     position: relative;
     width: 270px;  /* Szerokość kontenera */
@@ -21,7 +21,9 @@
     overflow: hidden; /* Ukrycie nadmiaru obrazu */
 }
 
-.contSong .birdImg{
+
+
+.contSong .birdImg, .contImage .birdImg{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -64,4 +66,14 @@
     margin-left: 5px;
     margin-right: 5px;
     width: 100px;
+}
+
+
+/* Nazwa i rodzina */
+.birdNameCard{
+    color: var(--main-text-color);
+}
+.familyNameCard{
+    font-size: 19px;
+    opacity: 60%;
 }

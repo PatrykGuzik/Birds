@@ -21,6 +21,12 @@
     max-width: 300px;
 }
 
+.contImage{
+    display: none;
+    height: 420px;
+    max-width: 300px;
+}
+
 /* Pokazanie pierwszej karty */
 #c0{
     display: block;

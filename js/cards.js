@@ -107,7 +107,7 @@ function getImagesOnPage(birdsList) {
 	for (let i = 0; i < birdsList.length; i++) {
 		console.log(birdsList[i].jpg);
 		
-		row += `<div id="c${i}" class="contSong">
+		row += `<div id="c${i}" class="contImage">
                     <div id=firstPage${i} class="firstPage">
 						<div class="imgContainer">
 							<img class="birdImg" src="${birdsList[i].jpg}" alt="" />
@@ -148,7 +148,8 @@ function checkSound(birdList) {
         		<img class="birdImg" src="${birdList[i].jpg}" alt="" />
 			</div>
 
-        <div>${birdList[i].nazwa}</div>
+        	<div class="birdNameCard">${birdList[i].nazwa}</div>
+        	<div class="familyNameCard">${birdList[i].rodzina}</div>
         
         `;
 			changePage(i, 2);
@@ -186,7 +187,8 @@ function checkImage(birdList) {
 			answer.innerHTML = `
 			<div class="imgContainer">
         <img class="birdImg" src="${birdList[i].jpg}" alt="" /> </div>
-        <div>${birdList[i].nazwa}</div>
+        <div class="birdNameCard">${birdList[i].nazwa}</div>
+        <div class="familyNameCard">${birdList[i].rodzina}</div>
         
         `;
 			changePage(i, 2);

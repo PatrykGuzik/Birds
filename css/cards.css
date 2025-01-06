@@ -38,7 +38,11 @@
     font-size: 20px;
     padding: 10px;
     border: none;
-    box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5); */
+}
+
+.repeatCont button{
+    margin-top: 50%;
 }
 
 .finishInfo{

@@ -11,7 +11,7 @@ function getMySets() {
 			<i class="fa-solid fa-trash-can"></i>
 		</button>
 	</div>
-	
+	${getLevelBtns()}
 	`;
 
 	// Odczyt z LOCAL STORAGE

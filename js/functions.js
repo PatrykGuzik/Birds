@@ -164,7 +164,9 @@ function showInfoPanel(iteration, setsW) {
 					getImgByName(setsW[iteration].ptaki[i].nazwa)
 					}" alt="">
 				</div>
+				<div class="contListBirdName">
 				${setsW[iteration].ptaki[i].nazwa}
+				</div>
 			
 			</li>
 		`;
@@ -221,3 +223,96 @@ function getImgByName(name) {
 	return bird.jpg
 }
 
+
+
+// LVL
+function isEasy(v) {
+	const lvlBtnEasy = document.querySelectorAll('.lvlBtnEasy')
+	const lvlBtnNotEasy = document.querySelectorAll('.lvlBtnNotEasy')
+	
+	//Jeśli zaznaczone "Łatwe"
+	if (v) {
+		if (!isEasySet) {
+			lvlBtnEasy.forEach(element => {
+				element.classList.toggle("isCheck")
+			});
+			lvlBtnNotEasy.forEach(element => {
+				element.classList.toggle("isCheck")
+			});
+			isEasySet = true;
+		}
+		
+
+	}else{
+		if (isEasySet) {
+			lvlBtnEasy.forEach(element => {
+				element.classList.toggle("isCheck")
+			});
+			lvlBtnNotEasy.forEach(element => {
+				element.classList.toggle("isCheck")
+			});
+			isEasySet = false;
+		}
+	}
+	
+}
+
+function setIsEasyBtn(v) {
+	if (v) {
+		if (isEasySet) {
+			return "isCheck";
+		} else {
+			return "";
+		}
+	}else{
+		if (!isEasySet) {
+			return "isCheck";
+		} else {
+			return "";
+		}
+	}
+}
+
+function getLevelBtns() {
+	return `
+		<div class="levelBtnCont">
+			<button class="lvlBtnEasy ${setIsEasyBtn(true)}" onclick="isEasy(true)">
+				Łatwe
+			</button>
+			<button class="lvlBtnNotEasy ${setIsEasyBtn(false)}" onclick="isEasy(false)">
+				Trudne
+			</button>
+			<button class="infoLvl" onclick="getInfoLvl()">
+				<i class="fa-solid fa-info"></i>
+			</button>
+		</div>
+
+		<div class="infoLvlCont">
+			<button class="infoLvlRemove" onclick="removeInfoLvl()">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+			<h3>Poziom łatwy</h3>
+			<span>1 odgłos - śpiew jeżeli ptak śpiewa, jeśli nie, to najbardziej charakterystyczny odgłos dla danego ptaka</span>
+
+			<h3>Poziom trudny</h3>
+			<span>losowe odgłosy- śpiewy, zawołania, i inne odgłosy niedziobowe</span>
+
+
+		</div>
+	
+	`
+}
+
+function getInfoLvl() {
+	const infoCont = document.querySelectorAll(".infoLvlCont")
+	infoCont.forEach(element => {
+		element.classList.add("showLvlInfo")
+	});
+	
+}
+function removeInfoLvl(){
+	const infoCont = document.querySelectorAll(".infoLvlCont")
+	infoCont.forEach(element => {
+		element.classList.remove("showLvlInfo")
+	});
+}

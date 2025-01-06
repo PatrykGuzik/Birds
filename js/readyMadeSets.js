@@ -1,6 +1,8 @@
+
+
 function getReadyMadeSets() {
 	const readyMadeSets = document.getElementById("readyMadeSets");
-	let row = ``;
+	let row = `${getLevelBtns()}`;
 	for (let i = 0; i < sets.length; i++) {
 		row += getHTMLSet(sets, i, "sets");
 	}

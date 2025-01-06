@@ -51,15 +51,20 @@ function getSoundsOnPage(birdsList) {
 	const cont = document.getElementById("container1");
 	cont.innerHTML = "";
 
+
 	let row = "";
 	for (let i = 0; i < birdsList.length; i++) {
+		let voice = birdsList[i].spiew[0]
+		if (!isEasySet) {
+			voice = getRandVoice(i,birdsList)
+		}
+		
+
+
 		row += `<div id="c${i}" class="contSong">
                     <div id=firstPage${i} class="firstPage">
                       <audio id="myAudio${i}" preload="metadata">
-                      <source src="https://${getRandVoice(
-												i,
-												birdsList
-											)}" type="audio/mpeg">
+                      <source src="https://${voice}" type="audio/mpeg">
         Your browser does not support the audio element.
                       </audio>
   
@@ -100,17 +105,13 @@ function getImagesOnPage(birdsList) {
 
 	let row = "";
 	for (let i = 0; i < birdsList.length; i++) {
+		console.log(birdsList[i].jpg);
+		
 		row += `<div id="c${i}" class="contSong">
                     <div id=firstPage${i} class="firstPage">
 						<div class="imgContainer">
 							<img class="birdImg" src="${birdsList[i].jpg}" alt="" />
 						</div>
-                      	
-  
-                    
-                      
-  
-                      
                       <div class="checkW">
                     <div id="${i}" 
                     class="next">

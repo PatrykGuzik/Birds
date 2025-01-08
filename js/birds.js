@@ -794,84 +794,84 @@ const birds = [
 		okres: "",
 		rodzina: "bekasowate"
 	},
-	// {
-	// 	nazwa: "Słonka",
-	// 	nazwaENG: "Eurasian Woodcock",
-	// 	nazwaLat: "Scolopax rusticola",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Krwawodziób",
-	// 	nazwaENG: "Common Redshank",
-	// 	nazwaLat: "Tringa totanus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Łęczak",
-	// 	nazwaENG: "Wood Sandpiper",
-	// 	nazwaLat: "Tringa glareola",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Samotnik",
-	// 	nazwaENG: "Green Sandpiper",
-	// 	nazwaLat: "Tringa ochropus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Rycyk",
-	// 	nazwaENG: "Black-tailed Godwit",
-	// 	nazwaLat: "Limosa limosa",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Szlamnik",
-	// 	nazwaENG: "Bar-tailed Godwit",
-	// 	nazwaLat: "Limosa lapponica",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
+	{
+		nazwa: "Słonka",
+		nazwaENG: "Eurasian Woodcock",
+		nazwaLat: "Scolopax rusticola",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EURASIAN-WOODCOCK-MANGPOO.jpg/640px-EURASIAN-WOODCOCK-MANGPOO.jpg",
+		autorJPG: "Rajkimar99, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=147133085",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC924341-Morkulla_16.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "bekasowate"
+	},
+	{
+		nazwa: "Krwawodziób",
+		nazwaENG: "Common Redshank",
+		nazwaLat: "Tringa totanus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Common_Redshank_Tringa_totanus.jpg/640px-Common_Redshank_Tringa_totanus.jpg",
+		autorJPG: "Andreas Trepte, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=10609249",
+		spiew: ["xeno-canto.org/sounds/uploaded/LELYWQKUZX/XC905831-Tringa-totanus-240422_015%2C-%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9-%D0%91%D0%B0%D1%81%D0%BA%D1%83%D0%BD%D1%87%D0%B0%D0%BA%2C%D0%B2%D0%B5%D1%87%D0%B5%D1%80-%D0%BD%D0%BE%D1%87%D1%8C.-AAA-call.mp3"],
+		autorzyDzwiekow: ["Albert Lastukhin"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "bekasowate"
+	},
+	{
+		nazwa: "Łęczak",
+		nazwaENG: "Wood Sandpiper",
+		nazwaLat: "Tringa glareola",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Tringa_glareola_-_Laem_Phak_Bia.jpg/640px-Tringa_glareola_-_Laem_Phak_Bia.jpg",
+		autorJPG: "JJ Harrison, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=13352868",
+		spiew: ["xeno-canto.org/sounds/uploaded/BBJSEFYVPV/XC933519-Wood-Sandpiper-24-July-24-LO-2346.mp3"],
+		autorzyDzwiekow: ["Alan Dalton"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "bekasowate"
+	},
+	{
+		nazwa: "Samotnik",
+		nazwaENG: "Green Sandpiper",
+		nazwaLat: "Tringa ochropus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tringa_ochropus_1_%28Marek_Szczepanek%29.jpg/640px-Tringa_ochropus_1_%28Marek_Szczepanek%29.jpg",
+		autorJPG: "CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=93990",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC900463-Skogssn%C3%A4ppa_31.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "bekasowate"
+	},
+	{
+		nazwa: "Rycyk",
+		nazwaENG: "Black-tailed Godwit",
+		nazwaLat: "Limosa limosa",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Limosa_limosa_%28Uitkerke%29.jpg/640px-Limosa_limosa_%28Uitkerke%29.jpg",
+		autorJPG: "",
+		spiew: ["xeno-canto.org/sounds/uploaded/FWZHXTNMKN/XC947473-NFC_LIMLIM_4.mp3"],
+		autorzyDzwiekow: ["Maxime Pirio"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "bekasowate"
+	},
+	{
+		nazwa: "Szlamnik",
+		nazwaENG: "Bar-tailed Godwit",
+		nazwaLat: "Limosa lapponica",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Bar-tailed_Godwit.jpg/640px-Bar-tailed_Godwit.jpg",
+		autorJPG: "Andreas Trepte, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=15764240",
+		spiew: ["xeno-canto.org/sounds/uploaded/WBZVBDKAUE/XC933298-barwit.mp3"],
+		autorzyDzwiekow: ["Paul Kelly"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: ""
+	},
 	// {
 	// 	nazwa: "Sieweczka Rzeczna",
 	// 	nazwaENG: "Little Ringed Plover",
@@ -1712,8 +1712,8 @@ const birdList3 = ["Grzywacz", "Śmieszka", "Kopciuszek", "Pliszka siwa", "Rudzi
 // Ptaki Miasta 3
 const birdList4 = ["Sierpówka", "Dzwoniec", "Oknówka", "Modraszka", "Pełzacz ogrodowy", "Strzyżyk", "Trznadel", "Kwiczoł", "Szczygieł", "Krogulec", "Piegża","Dymówka"]
 
-// Siewki
-const birdList5 = ["Czajka", "Kszyk", "Słonka", "Krwawodziób", "Łęczak", "Samotnik", "Rycyk", "Szlamnik", "Sieweczka Rzeczna", "Sieweczka Obrożna"]
+// Siewki  dodać "Sieweczka Rzeczna", "Sieweczka Obrożna"
+const birdList5 = ["Czajka", "Kszyk", "Słonka", "Krwawodziób", "Łęczak", "Samotnik", "Rycyk", "Szlamnik"]
 
 // Kaczki i Łabędzie
 const birdList6 = ["Krzyżówka", "Krakwa", "Cyranka", "Cyraneczka", "Świstun", "Płaskonos", "Rożeniec", "Łąbędź Niemy", "Łabędź Krzykliwy", "Łabędź Czarnodzioby"]
@@ -1743,6 +1743,7 @@ let sets = [];
 sets.push(createNewBirdList("Ptaki Miasta 1", birdList2, birds));
 sets.push(createNewBirdList("Ptaki Miasta 2", birdList3, birds));
 sets.push(createNewBirdList("Ptaki Miasta 3", birdList4, birds));
+sets.push(createNewBirdList("Siewki", birdList5, birds));
 
 
 

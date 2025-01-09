@@ -158,7 +158,7 @@ function showInfoPanel(iteration, setsW) {
 
 		for (let i = 0; i < setsW[iteration].ptaki.length; i++) {
 			infoList += `
-			<li>
+			<li onclick="showInfoPanelBird('${setsW[iteration].ptaki[i].nazwa}')">
 				<div class="contListImg">
 				 	<img  src="${
 					getImgByName(setsW[iteration].ptaki[i].nazwa)

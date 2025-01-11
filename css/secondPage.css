@@ -13,11 +13,11 @@
 }
 
 .contSong .imgContainer, .contImage .imgContainer{
-    margin-top: 5px;
+    /* margin-top: 5px; */
     position: relative;
-    width: 270px;  /* Szerokość kontenera */
-    height: 180px; /* Wysokość kontenera */
-    border-radius: 10px;
+    width: 100%;  /* Szerokość kontenera */
+    height: 200px; /* Wysokość kontenera */
+    border-radius: 10px 10px 0 0;
     overflow: hidden; /* Ukrycie nadmiaru obrazu */
 }
 

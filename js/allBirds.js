@@ -65,12 +65,13 @@ function getBirdListHTML(birdList) {
 
 		if (sortBirds[i].jpg != "") {
 			img = `
-            <img class="imgBtn" onclick="showInfoPanelBird('${sortBirds[i].nazwa}')" src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
+            <img class="imgBtn"  src="${sortBirds[i].jpg}" alt="Opis obrazka" width="150" height="100">
             `;
 		}
 
 		row += `
-            <div id="listElement${i}" class="birdListElement">
+            <div id="listElement${i}" class="birdListElement" onclick="showInfoPanelBird('${sortBirds[i].nazwa}')">
+			
 				<div class="imgContainer">
 					${img}
 					${author}

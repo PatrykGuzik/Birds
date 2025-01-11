@@ -145,7 +145,7 @@ function checkSound(birdList) {
 			answer = document.getElementById(`birdName${i}`);
 			answer.innerHTML = `
 			<div class="imgContainer">
-        		<img class="birdImg" src="${birdList[i].jpg}" alt="" />
+        		<img onclick="showInfoPanelBird('${birdList[i].nazwa}')" class="birdImg" src="${birdList[i].jpg}" alt="" />
 			</div>
 
         	<div class="birdNameCard">${birdList[i].nazwa}</div>
@@ -186,7 +186,7 @@ function checkImage(birdList) {
 			answer = document.getElementById(`birdName${i}`);
 			answer.innerHTML = `
 			<div class="imgContainer">
-        <img class="birdImg" src="${birdList[i].jpg}" alt="" /> </div>
+        <img onclick="showInfoPanelBird('${birdList[i].nazwa}')" class="birdImg" src="${birdList[i].jpg}" alt="" /> </div>
         <div class="birdNameCard">${birdList[i].nazwa}</div>
         <div class="familyNameCard">${birdList[i].rodzina}</div>
         

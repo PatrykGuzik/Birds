@@ -5,6 +5,7 @@ function getMenu() {
 
 	// zamknięcie infoPanel
 	removeInfoPanel();
+	removeInfoPanelBird();
 
 	// zatrzymanie odtwarzania
 	stopAllMediaPlayers();

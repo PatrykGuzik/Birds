@@ -1132,84 +1132,74 @@ const birds = [
 		okres: "",
 		rodzina: "jastrzębiowate"
 	},
-	// {
-	// 	nazwa: "Myszołów Włochaty",
-	// 	nazwaENG: "Rough-legged Buzzard",
-	// 	nazwaLat: "Buteo lagopus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Trzmielojad",
-	// 	nazwaENG: "European Honey Buzzard",
-	// 	nazwaLat: "Pernis apivorus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Jastrząb",
-	// 	nazwaENG: "Northern Goshawk",
-	// 	nazwaLat: "Accipiter gentilis",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Krogulec",
-	// 	nazwaENG: "Eurasian Sparrowhawk",
-	// 	nazwaLat: "Accipiter nisus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Błotniak Stawowy",
-	// 	nazwaENG: "Western Marsh Harrier",
-	// 	nazwaLat: "Circus aeruginosus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Błotniak Łąkowy",
-	// 	nazwaENG: "Montagu's Harrier",
-	// 	nazwaLat: "Circus pygargus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
+	{
+		nazwa: "Myszołów Włochaty",
+		nazwaENG: "Rough-legged Buzzard",
+		nazwaLat: "Buteo lagopus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Buteo_lagopus_Iona1.jpg/604px-Buteo_lagopus_Iona1.jpg",
+		autorJPG: "Greg7, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=8320965",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC747268-Fj%C3%A4llvr%C3%A5k_10.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
+	{
+		nazwa: "Trzmielojad",
+		nazwaENG: "European Honey Buzzard",
+		nazwaLat: "Pernis apivorus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Pernis_apivorus%2C_onvolwassene%2C_Unguana%2C_Birding_Weto%2C_a.jpg/583px-Pernis_apivorus%2C_onvolwassene%2C_Unguana%2C_Birding_Weto%2C_a.jpg",
+		autorJPG: "Maans Booysen, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=54336282",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC826297-Bivr%C3%A5k_16.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
+	{
+		nazwa: "Jastrząb",
+		nazwaENG: "Northern Goshawk",
+		nazwaLat: "Accipiter gentilis",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Jastrz%C4%85b_mlody.jpg/490px-Jastrz%C4%85b_mlody.jpg",
+		autorJPG: "Krzysztof Wiśniewski, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=28868571",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/CUTVXELDKQ/XC877694-Havik-Trijselenberg-240224.mp3","xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC818170-Duvh%C3%B6k_25.mp3"],
+		autorzyDzwiekow: ["Henk Schreuders", "Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
+	{
+		nazwa: "Błotniak Stawowy",
+		nazwaENG: "Western Marsh Harrier",
+		nazwaLat: "Circus aeruginosus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Circus_aeruginosus_samiec4.jpg/640px-Circus_aeruginosus_samiec4.jpg",
+		autorJPG: "Artur Mikołajewski, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=2191627",
+		spiew: [
+			"xeno-canto.org/sounds/uploaded/POVKNQVSGU/XC884134-Circus-aeruginosus_adult-male-calling-when-bring-sticks-to-nest_230324_Grulleros.mp3",
+			"xeno-canto.org/sounds/uploaded/EDRTTPSCEN/XC870796-Busard-des-roseaux-230605-1100-1FC-France-Etgan-Lachausee-MixPre-4629.mp3"],
+		autorzyDzwiekow: ["João Tomás", "Alain Malengreau"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
+	{
+		nazwa: "Błotniak Łąkowy",
+		nazwaENG: "Montagu's Harrier",
+		nazwaLat: "Circus pygargus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flickr_-_don_macauley_-_Bird_015.jpg/633px-Flickr_-_don_macauley_-_Bird_015.jpg",
+		autorJPG: "Donald Macauley, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=15377225",
+		spiew: ["xeno-canto.org/sounds/uploaded/HIHTLXWFNR/XC804515-Busard-cendr%C3%A9-femelle.mp3"],
+		autorzyDzwiekow: ["Gautier Laurent"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: ""
+	},
 	// {
 	// 	nazwa: "Błotniak Zbożowy",
 	// 	nazwaENG: "Pallid Harrier",
@@ -1696,7 +1686,7 @@ const birdList6 = ["Krzyżówka", "Krakwa", "Cyranka", "Cyraneczka", "Świstun",
 const birdList7 = ["Gęgawa", "Gęś Zbożowa", "Gęś Tundrowa", "Gęś Białoczelna", "Gęś Mała", "Gęś Krótkodzioba", "Bernikla Kanadyjska", "Bernikla Białoszyja", "Bernikla Obrożna"]
 
 // Szponiaste
-const birdList8 = ["Myszołów", "Myszołów Włochaty", "Trzmielojad", "Jastrząb", "Krogulec", "Błotniak Stawowy", "Błotniak Łąkowy", "Błotniak Zbożowy", "Kania Ruda", "Kania Czarna"
+const birdList8 = ["Myszołów", "Myszołów Włochaty", "Trzmielojad", "Jastrząb", "Krogulec", "Błotniak Stawowy", "Błotniak Łąkowy", "Błotniak Zbożowy", "Kania Ruda", "Kania Czarna", "Pustułka"
 ]
 
 // Mewy

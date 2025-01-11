@@ -1,3 +1,6 @@
+// sortowanie
+let sortType = "name";
+
 // Ptaki w Menu
 function getBirds() {
 	const birdsMenu = document.getElementById("birdsMenu");
@@ -10,7 +13,15 @@ function getBirds() {
 		<i class="fa-solid fa-magnifying-glass"></i>
 		<input autocomplete="off" type="text" placeholder="Szukaj" id="findBird">
 	</div>
-		<div class="bodyCont"></div>
+	<div class="sortMainCont">
+		<div>Sortuj po:</div>
+		<div class="sortButtonsCont">
+			<button  onclick="changeSort('name')">nazwie</button>
+			<button onclick="changeSort('family')"> rodzinie</button>
+			<div class="toogle left"></div>
+		</div>
+	</div>
+	<div class="bodyCont"></div>
 	
 	`;
 	birdsMenu.innerHTML = head;
@@ -22,14 +33,58 @@ function getBirds() {
 
 	// Wyszukiwanie
 	const inputBird = document.getElementById("findBird");
-	const sortBirds = sortBirdsByName(birds);
+
 
 	inputBird.addEventListener("input", function (e) {
-		const filteredBirds = sortBirds.filter(bird =>
-			bird.nazwa.toLowerCase().includes(inputBird.value.toLowerCase())
-		);
+		let filteredBirds; 
+		console.log(sortType);
+
+		if (sortType=="name") {
+			const sortBirdsA = sortBirdsByName(birds);
+			filteredBirds = sortBirdsA.filter(bird =>
+				bird.nazwa.toLowerCase().includes(inputBird.value.toLowerCase())
+			);
+			console.log(sortType);
+			
+		}else if(sortType=="family"){
+			const sortBirdsB = sortBirdsByFamily(birds);
+			filteredBirds = sortBirdsB.filter(bird =>
+				bird.rodzina.toLowerCase().includes(inputBird.value.toLowerCase())
+			);
+			console.log(sortType);
+		}
+		
+		
 		bodyCont.innerHTML = getBirdListHTML(filteredBirds);
 	});
+}
+
+// zmiana sortowania
+function changeSort(type) {
+	const inputBird = document.getElementById("findBird");
+	inputBird.value = "";
+
+	//zmiana przycisku
+	const toggle = document.querySelector(".toogle")
+	if (type == "name") {
+		toggle.classList.add("left")
+		toggle.classList.remove("right")
+	}else if(type == "family"){
+		toggle.classList.add("right")
+		toggle.classList.remove("left")
+	}
+	
+	
+
+
+	if (type == "name") {
+		sortType = "name";
+	}else if(type == "family"){
+		sortType = "family";
+	}
+
+	const bodyCont = document.querySelector(".bodyCont");
+	bodyCont.innerHTML = getBirdListHTML(birds);
 }
 
 function removeInfoPanelBird() {
@@ -41,8 +96,17 @@ function removeInfoPanelBird() {
 	});
 }
 
+
+
 function getBirdListHTML(birdList) {
-	let sortBirds = sortBirdsByName(birdList);
+
+	let sortBirds;
+	if (sortType == "name") {
+		sortBirds = sortBirdsByName(birdList);
+	}else if(sortType == "family"){
+		sortBirds = sortBirdsByFamily(birdList);
+	}
+	 
 
 	let row = ``;
 
@@ -91,6 +155,8 @@ function getBirdListHTML(birdList) {
 }
 
 function showInfoPanelBird(nazwa) {
+	console.log(sortType);
+	
 	const infoPanel = document.querySelector(".infoPanelBird");
 	const birdToShow = findBirdFromList(birds, nazwa);
 	const infoContent = document.querySelector(".infoBirdContent");

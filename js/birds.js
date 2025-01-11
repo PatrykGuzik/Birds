@@ -1198,7 +1198,7 @@ const birds = [
 		siedlisko: "",
 		opis: "",
 		okres: "",
-		rodzina: ""
+		rodzina: "jastrzębiowate"
 	},
 	// {
 	// 	nazwa: "Błotniak Zbożowy",

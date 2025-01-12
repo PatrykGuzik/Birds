@@ -187,7 +187,7 @@ function getInfoPanel() {
 	
 	<div class="infoPanel hidden">
 		<button onclick="removeInfoPanel()">
-			<i class="fa-solid fa-x"></i>
+			<i class="fa-solid fa-xmark"></i>
 		</button>
 		<div class="infoContent"></div>
 	</div>`;

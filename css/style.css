@@ -1,10 +1,31 @@
-:root {
-    --background-color: #dfdfdf;  
-    --main-text-color: rgb(0, 0, 0);
-    --main-button-color: #FFBA00;
-    --second-text-color: #000000;
+/* 
+#d4e2d3 zielony bardzo jasny
+#606C38 zielony jasny
+#283618 zielony ciemny
+#FEFAE0 kremowy
+#DDA15E pomarańczowy jasny
+#BC6C25 pomarańczowy ciemny
+*/
+
+
+/* :root {
+    --background-color: #d4e2d3;  
+    --main-text-color: #606C38;
+    --main-button-color: #606C38;
+    --second-text-color: #FEFAE0;
     --second-button-color: #6D9773;
-    --card-color: rgb(171, 171, 171);
+    --card-color: #FEFAE0;
+  } 
+*/
+
+
+:root {
+    --background-color: #d4e2d3;  
+    --main-text-color: #283618;
+    --main-button-color: #DDA15E;
+    --second-text-color: #283618;
+    --second-button-color: #6D9773;
+    --card-color: #FEFAE0;
   }
 
 body{
@@ -102,9 +123,11 @@ button{
 /* Info panel */
 .infoPanel{
     position:absolute;
+    left: 0;
     background-color: var(--background-color);
     padding: 15px;
     width: 90%;
+    height: 100vh;
     padding-bottom: 20px;
     z-index: 999;
 
@@ -119,7 +142,7 @@ button{
     margin: 0;
     margin-left: auto;
     box-shadow: none;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .infoPanel ul{
@@ -197,7 +220,7 @@ button{
     margin: 0;
     margin-left: auto;
     box-shadow: none;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 
@@ -211,6 +234,7 @@ button{
 .levelBtnCont{
     display: flex;
 }
+
 .levelBtnCont button{
     font-size: 20px;
     font-weight: 600;

@@ -1200,45 +1200,45 @@ const birds = [
 		okres: "",
 		rodzina: "jastrzębiowate"
 	},
-	// {
-	// 	nazwa: "Błotniak Zbożowy",
-	// 	nazwaENG: "Pallid Harrier",
-	// 	nazwaLat: "Circus macrourus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Kania Ruda",
-	// 	nazwaENG: "Red Kite",
-	// 	nazwaLat: "Milvus milvus",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Kania Czarna",
-	// 	nazwaENG: "Black Kite",
-	// 	nazwaLat: "Milvus migrans",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
+	{
+		nazwa: "Błotniak Zbożowy",
+		nazwaENG: "Pallid Harrier",
+		nazwaLat: "Circus macrourus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hen_Harrier.jpg/640px-Hen_Harrier.jpg",
+		autorJPG: "Andreas Trepte, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=5398696",
+		spiew: ["xeno-canto.org/sounds/uploaded/YEEQSGIKMT/XC145150-Steppekiekendief_20130612_01_roep_vrouwtje.mp3"],
+		autorzyDzwiekow: ["Thijs Fijen"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
+	{
+		nazwa: "Kania Ruda",
+		nazwaENG: "Red Kite",
+		nazwaLat: "Milvus milvus",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Milvus_milvus_L%28ThKraft%29.jpg/640px-Milvus_milvus_L%28ThKraft%29.jpg",
+		autorJPG: "Thomas Kraft, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=1567995",
+		spiew: ["xeno-canto.org/sounds/uploaded/EGHCOFEENE/XC926887-Red-KiteXC.mp3"],
+		autorzyDzwiekow: ["Roger Ahlman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
+	{
+		nazwa: "Kania Czarna",
+		nazwaENG: "Black Kite",
+		nazwaLat: "Milvus migrans",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Milvus_migrans_front%28ThKraft%29.jpg/640px-Milvus_migrans_front%28ThKraft%29.jpg",
+		autorJPG: "Thomas Kraft, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=3808120",
+		spiew: ["xeno-canto.org/sounds/uploaded/VWWRQKFKMD/XC884100-milan-23mars24-15h.mp3"],
+		autorzyDzwiekow: ["Christian Kerihuel"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "jastrzębiowate"
+	},
 	// {
 	// 	nazwa: "Śmieszka",
 	// 	nazwaENG: "Black-headed Gull",
@@ -1708,6 +1708,7 @@ sets.push(createNewBirdList("Ptaki Miasta 1", birdList2, birds));
 sets.push(createNewBirdList("Ptaki Miasta 2", birdList3, birds));
 sets.push(createNewBirdList("Ptaki Miasta 3", birdList4, birds));
 sets.push(createNewBirdList("Siewki", birdList5, birds));
+sets.push(createNewBirdList("Szponiaste", birdList8, birds));
 
 
 

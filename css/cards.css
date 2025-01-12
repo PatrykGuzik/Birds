@@ -8,24 +8,20 @@
 
 
 .container{
-    width: 95%;
+    width: 90%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* kontener na Karty */
-.contSong{
+.contSong, .contImage{
     display: none;
-    height: 420px;
+    height: 460px;
     /* max-width: 300px; */
 }
 
-.contImage{
-    display: none;
-    height: 420px;
-    /* max-width: 300px; */
-}
+
 
 /* Pokazanie pierwszej karty */
 #c0{

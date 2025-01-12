@@ -16,7 +16,7 @@
     /* margin-top: 5px; */
     position: relative;
     width: 100%;  /* Szerokość kontenera */
-    height: 200px; /* Wysokość kontenera */
+    height: 220px; /* Wysokość kontenera */
     border-radius: 10px 10px 0 0;
     overflow: hidden; /* Ukrycie nadmiaru obrazu */
 }
@@ -28,11 +28,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Wyśrodkowanie obrazu */
-    
     /* Dopasowanie obrazu względem dłuższego boku */
     width: 100%; /* Domyślnie wypełnia szerokość */
     height: auto; /* Proporcjonalne skalowanie */
-    border-radius: 10px;
 }
 
 
@@ -50,23 +48,14 @@
     /* box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5); */
 
 }
-.ifKnow .no{
+.ifKnow .no, .ifKnow .yes{
     color: var(--main-text-color);
     background-color: var(--background-color);
     border: none;
     margin-left: 5px;
     margin-right: 5px;
-    width: 100px;
+}
 
-}
-.ifKnow .yes{
-    color: var(--main-text-color);
-    background-color: var(--background-color);
-    border: none;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 100px;
-}
 
 
 /* Nazwa i rodzina */
@@ -74,6 +63,6 @@
     color: var(--main-text-color);
 }
 .familyNameCard{
-    font-size: 19px;
+    font-size: 16px;
     opacity: 60%;
 }

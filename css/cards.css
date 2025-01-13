@@ -1,9 +1,9 @@
 /* ---Counter---- */
 #counter{
     text-align: center;
-    font-size: 30px;
-    margin-top: 10px;
-    color: var(--main-text-color);
+    font-size: 35px;
+    margin: 10px;
+    color: var(--main-button-color);
 }
 
 

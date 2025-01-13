@@ -62,6 +62,7 @@ function getSoundsOnPage(birdsList) {
 
 
 		row += `<div id="c${i}" class="contSong">
+					<div class="whole"></div>
                     <div id=firstPage${i} class="firstPage">
                       <audio id="myAudio${i}" preload="metadata">
                       <source src="https://${voice}" type="audio/mpeg">

@@ -138,6 +138,14 @@ function removeItemByName(data, nameToRemove) {
 }
 
 function removeInfoPanel() {
+
+	const readyMadeSets = document.querySelector(".readyMadeSets")
+	readyMadeSets.classList.remove("removeOpacity")
+
+	const mySets = document.querySelector(".mySets")
+	mySets.classList.remove("removeOpacity")
+
+
 	const infoPanel = document.querySelectorAll(".infoPanel");
 	stopAllMediaPlayers()
 	infoPanel.forEach(element => {
@@ -147,6 +155,14 @@ function removeInfoPanel() {
 
 // Pokazuje Panel z listą ptaków
 function showInfoPanel(iteration, setsW) {
+
+	const readyMadeSets = document.querySelector(".readyMadeSets")
+	readyMadeSets.classList.add("removeOpacity")
+
+	const mySets = document.querySelector(".mySets")
+	mySets.classList.add("removeOpacity")
+
+
 	const infoPanel = document.querySelectorAll(".infoPanel");
 
 	infoPanel.forEach(element => {
@@ -308,6 +324,8 @@ function getInfoLvl() {
 	infoCont.forEach(element => {
 		element.classList.add("showLvlInfo")
 	});
+
+
 	
 }
 function removeInfoLvl(){
@@ -315,4 +333,6 @@ function removeInfoLvl(){
 	infoCont.forEach(element => {
 		element.classList.remove("showLvlInfo")
 	});
+
+
 }

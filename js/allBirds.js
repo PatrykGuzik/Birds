@@ -6,9 +6,9 @@ function getBirds() {
 	const birdsMenu = document.getElementById("birdsMenu");
 	const head = `
 	<h1>Dostępne Ptaki</h1>
-    <div>
+    <span>
 		${birds.length} ptaków
-	</div>
+	</span>
 	<div class="searchBirdCont">
 		<i class="fa-solid fa-magnifying-glass"></i>
 		<input autocomplete="off" type="text" placeholder="Szukaj" id="findBird">
@@ -94,6 +94,11 @@ function removeInfoPanelBird() {
 		// element.classList.add("hiddenInfoBird");
 		element.classList.remove("showInfoBird");
 	});
+
+	const birdsMenu = document.querySelector(".birdsMenu")
+
+	// pokazanie tła birdsMenu
+	birdsMenu.classList.remove("hideMenuBirds")
 }
 
 
@@ -160,6 +165,11 @@ function showInfoPanelBird(nazwa) {
 	const infoPanel = document.querySelector(".infoPanelBird");
 	const birdToShow = findBirdFromList(birds, nazwa);
 	const infoContent = document.querySelector(".infoBirdContent");
+	const birdsMenu = document.querySelector(".birdsMenu")
+
+	// usunięcie tła birdsMenu
+	birdsMenu.classList.add("hideMenuBirds")
+
 
 	let songs = "";
 

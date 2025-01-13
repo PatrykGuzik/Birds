@@ -21,19 +21,26 @@
 
 :root {
     --background-color: #d4e2d3;  
-    --main-text-color: #283618;
-    --main-button-color: #DDA15E;
-    --second-text-color: #283618;
+    --main-text-color: #000000d8;
+    --main-button-color: #ffffffd2;
+    --second-text-color: #000000d8;
     --second-button-color: #6D9773;
-    --card-color: #FEFAE0;
+    --card-color: #ffffffd2;
   }
 
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: var(--background-color); /* Miętowy zielony */
-    color: #000000; /* Biały piasek */
+    background-color: var(--background-color); 
+    color: #000000; 
     font-weight: 600;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Aby móc przewijać stronę */
+    background-image: url('/img/las01.jpg'); /* Zmień na swój obraz */
+    background-size: cover; /* Dopasowanie obrazu do okna */
+    background-attachment: fixed; /* Przyklejenie tła */
+    background-position: center; /* Wyśrodkowanie tła */
 }
 
 .mainContainer{
@@ -61,12 +68,16 @@ button{
 }
 
 
-
+.removeOpacity{
+    /* left: 100%; */
+    opacity: 0;
+}
 
 
 /* Gotowe zestawy */
 .readyMadeSets{
-    display: none;
+    /* display: none; */
+    transition: right 0.4s ease;
 }
 
 
@@ -75,12 +86,16 @@ button{
 .checkSetBtnsCont{
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     height: 80px;
     text-align: center;
-    border-bottom: 1px solid var(--main-text-color);
     position: relative;
+    background-color: var(--main-button-color);
+    border-radius: 10px;
+    margin-top: 7px;
 }
+
+
 
 .checkSetName{
     font-size: 20px;
@@ -88,7 +103,7 @@ button{
     position: absolute;
     color: var(--second-text-color);
     top: 50%;
-    left: 0;
+    left: 10px;
     transform: translate(0,-50%);
     
 }
@@ -112,9 +127,7 @@ button{
 }
 
 
-.hidden {
-    display: none !important;
-  }
+
 
 .red {
     color: red !important;
@@ -122,16 +135,24 @@ button{
 
 /* Info panel */
 .infoPanel{
-    position:absolute;
-    left: 0;
-    background-color: var(--background-color);
+    margin-top: 15px;
+    position:fixed;
+    border-radius: 10px;
+    left: 50%;
+    background-color: var(--main-button-color);
     padding: 15px;
     width: 90%;
-    height: 100vh;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+    transform: translate(-50%);
     z-index: 999;
-
+    transition: all 0.4s ease;
+    overflow: hidden;
 }
+
+.hidden {
+    /* display: none !important; */
+    left: 200%;
+  }
 
 .infoPanel button{
     width: 50px;
@@ -197,19 +218,21 @@ button{
 
 
 .infoPanelBird{
+    margin-top: 15px;
     position:fixed;
     right: -100%;
-    background-color: var(--background-color);
+    background-color: var(--main-button-color);
     padding: 15px;
     width: 90%;
-    height: 100vh;
+    /* height: 80vh; */
     padding-bottom: 20px;
     z-index: 999;
     border-radius: 10px;
     transition: right 0.25s ease;
 }
 .showInfoBird{
-    right: 0;
+    right: 50%;
+    transform: translate(50%);
 }
 .infoPanelBird button{
     width: 50px;
@@ -239,18 +262,19 @@ button{
     font-size: 20px;
     font-weight: 600;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 10px;
     width: 200px;
-    background-color: #504f4f16;
+    background-color: #c3c3c37e;
 }
 
 
 .isCheck{
-    background-color: rgba(0, 0, 0, 0.418) !important;
+    background-color: rgba(255, 255, 255, 0.749) !important;
 }
 
 .levelBtnCont .infoLvl{
-    background-color: rgba(0, 0, 0, 0);
+    color: var(--main-button-color);
+    background-color: transparent;
     width: 80px;
 }
 
@@ -259,9 +283,9 @@ button{
     padding: 20px;
     right: -100%;
     top: -100%;
-    width: 80%;
+    width: 85%;
     height: 50%;
-    background-color: var(--card-color);
+    background-color: white;
     border-radius: 10px;
     z-index: 999;
     transition: all 0.25s ease;

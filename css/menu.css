@@ -44,6 +44,7 @@
 }
 
 .menuLogo{
+    margin-top: 20px;
     width: 300px;
     height: 150px;
     margin-left: auto;
@@ -54,20 +55,22 @@
 
 .menuLogo #logo1{
     font-size: 90px;
+    color: var( --main-button-color);
     position: absolute;
     top:0px;
     left:30px
 }
 .menuLogo #logo2{
     font-size: 58px;
+    color: var( --main-button-color);
     position: absolute;
-    top:64px;
-    left:50px
+    top:62px;
+    left:80px
 }
 
 .menuLogo img{
     position: absolute;
     width: 50px;
-    top:65px;
-    left:240px
+    top:53px;
+    left:261px
 }

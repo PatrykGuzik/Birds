@@ -31,13 +31,12 @@
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: var(--background-color); 
     color: #000000; 
     font-weight: 600;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100vh; /* Aby móc przewijać stronę */
-    background-image: url('/img/las01.jpg'); /* Zmień na swój obraz */
+    background-image: url('https://raw.githubusercontent.com/PatrykGuzik/Birds/refs/heads/main/img/las01.jpg'); /* Zmień na swój obraz */
     background-size: cover; /* Dopasowanie obrazu do okna */
     background-attachment: fixed; /* Przyklejenie tła */
     background-position: center; /* Wyśrodkowanie tła */

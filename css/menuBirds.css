@@ -56,6 +56,8 @@
     border-radius: 10px;
     padding: 0;
     height: 100px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
 }
 
 /* Obrazek */
@@ -90,6 +92,7 @@
     padding-left: 4px;
     padding-right: 4px;
     border-top-right-radius: 5px;
+    display: none;
 }
 
 .birdInfoContainer{
@@ -173,6 +176,7 @@
     display: flex;
     margin: 15px 0;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .searchBirdCont input{
@@ -181,6 +185,9 @@
     font-size: 20px;
     padding: 11px 35px;
     width: 100%;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
+
 }
 
 
@@ -205,8 +212,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #ffffffbc;
+    background-color: #ffffff41;
     border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
+    
 }
 
 .sortMainCont :first-child{

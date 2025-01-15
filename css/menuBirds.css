@@ -13,12 +13,12 @@
 
 .birdsMenu H1{
     font-size: 35px;
-    color: var( --main-button-color);
+    color: var( --white-text);
     margin: 0;
 }
 
 .birdsMenu span{
-    color: var( --main-button-color);
+    color: var( --white-text);
 }
 
 
@@ -58,6 +58,7 @@
     height: 100px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.305);
+    overflow: hidden;
 }
 
 /* Obrazek */
@@ -67,7 +68,7 @@
     position: relative;
     width: 150px; 
     height: 100px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden; /* Ukrycie nadmiaru obrazu */
 }
 
@@ -79,8 +80,11 @@
     /* Dopasowanie obrazu względem dłuższego boku */
     width: 100%; /* Domyślnie wypełnia szerokość */
     height: auto; /* Proporcjonalne skalowanie */
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
+
+
+
 
 .birdListElement .authorIMG{
     position: absolute;
@@ -139,6 +143,9 @@
     display: inline-block;
     margin-left: 5px;
 }
+
+
+
 .nameOfFamily{
     display: block;
     margin-left: 5px;

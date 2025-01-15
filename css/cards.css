@@ -3,7 +3,7 @@
     text-align: center;
     font-size: 35px;
     margin: 10px;
-    color: var(--main-button-color);
+    color: var(--white-text);
 }
 
 
@@ -32,9 +32,11 @@
 
 /* ------REPEAT------ */
 
+.repeatCont{
+    width: 100vw;;
+}
+
 .repeatCont button, .finishCont button{
-    background-color: var(--main-button-color);
-    color: var(--main-text-color); 
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
@@ -42,14 +44,42 @@
     font-size: 20px;
     padding: 10px;
     border: none;
-    /* box-shadow: 5px 5px 5px rgba(0,0, 0, 0.5); */
+    margin: 0;
+    width: 200px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 
 .repeatCont button{
-    margin-top: 50%;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.repeatCont button::before, .finishCont button::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 150%;
+    height: 200px;
+    transform: translate(-50%,-50%);
+   
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
+    z-index: -1;
 }
 
 .finishInfo{
+    color: var(--white-text);
     background-color: transparent;
     width: 90%;
     margin-left: auto;

@@ -26,6 +26,7 @@
     --second-text-color: #dfdfdfe8;
     --second-button-color: #6D9773;
     --card-color: #ffffff16;
+    --white-text: rgba(255, 255, 255, 0.637);
   }
 
 body{
@@ -152,44 +153,65 @@ button{
     left: 50%;
     background-color: var(--main-button-color);
     padding: 15px;
-    width: 90%;
+    width: 80%;
+    height: 80vh;
     /* padding-bottom: 20px; */
     transform: translate(-50%);
     z-index: 999;
     transition: all 0.4s ease;
-    overflow: hidden;
+    overflow: scroll;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
 }
 
 .hidden {
-    /* display: none !important; */
-    left: 200%;
+    display: none !important;
   }
 
-.infoPanel button{
+.headInfoBox{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+    background-color: #000000aa;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.removeInfoPanel{
+    position: sticky;
+    top: 0px;
+    margin-left: 3;
     width: 50px;
     height: 50px;
     background-color: transparent;
-    margin-left: auto;
     padding: 0;
     margin: 0;
-    margin-left: auto;
     box-shadow: none;
-    font-size: 40px;
+    font-size: 50px;
+    z-index: 9999;
 }
+
 
 .infoPanel ul{
     list-style-type: none;
+    padding-left: 0;
 }
 
 .infoPanel li{
     margin-top: 3px;
+    color: var(--white-text);
     font-size: 20px;
     border-bottom: 1px solid rgb(135, 135, 135);
 }
 
 .setNameInfo{
-    position: absolute;
-    top: 13px;
+    position:sticky;
+    display: inline;
+    color: var(--white-text);
+    padding: 10px;
+    border-radius: 5px;
     font-size: 30px;
 }
 
@@ -199,7 +221,7 @@ button{
     position: relative;
     width: 80px;  /* Szerokość kontenera */
     height: 50px; /* Wysokość kontenera */
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden; /* Ukrycie nadmiaru obrazu */
 }
 
@@ -213,6 +235,7 @@ button{
     height: auto; /* Proporcjonalne skalowanie */
     border-radius: 10px;
 }
+
 
 .contListBirdName{
     display: inline-block;
@@ -242,6 +265,18 @@ button{
     transition: right 0.25s ease;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.305);
+}
+
+.infoPanelBird::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
 }
 .showInfoBird{
     right: 50%;
@@ -278,16 +313,16 @@ button{
     padding: 10px;
     margin: 10px 10px;
     width: 200px;
-    background-color: #c3c3c37e;
+    background-color: #c3c3c340;
 }
 
 
 .isCheck{
-    background-color: rgba(255, 255, 255, 0.749) !important;
+    background-color: rgba(255, 255, 255, 0.442) !important;
 }
 
 .levelBtnCont .infoLvl{
-    color: var(--main-button-color);
+    color: var(--white-text);
     background-color: transparent;
     width: 80px;
 }

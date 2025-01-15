@@ -68,7 +68,7 @@ function setNewSet() {
 
 	row += `</div>
     <button id="saveBtn">zapisz</button>
-    <button onclick="getMenu()">Menu</button>
+    <br><br>
       `;
 
 	allBirds.innerHTML = row;

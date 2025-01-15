@@ -1,13 +1,11 @@
 /* First Page of card */
 .firstPage{
+    padding-top: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: transparent;
-    justify-content: center;
-    
-    
-
+    justify-content: space-around;
 }
 
 
@@ -94,7 +92,6 @@
 
 
 .playBtn{
-    /* position: absolute; */
     box-shadow:none;
     width: 200px;
     height: 200px;

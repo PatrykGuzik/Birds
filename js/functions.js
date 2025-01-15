@@ -92,6 +92,7 @@ const trimTrailingSpaces = str => str.replace(/\s+$/, "");
 
 // HTML Zestawu
 function getHTMLSet(set, iteration, sets, isTrash = false) {
+	
 	let trashCan = `
 		<button class="trashSet hidden" id="trash${iteration}" onclick="removeSet(${iteration})">
 			<i class="fa-solid fa-trash-can"></i>
@@ -155,7 +156,6 @@ function removeInfoPanel() {
 
 // Pokazuje Panel z listą ptaków
 function showInfoPanel(iteration, setsW) {
-
 	const readyMadeSets = document.querySelector(".readyMadeSets")
 	readyMadeSets.classList.add("removeOpacity")
 
@@ -170,7 +170,7 @@ function showInfoPanel(iteration, setsW) {
 
 		const infoContent = document.querySelector(".infoContent");
 
-		let infoList = `<div class="setNameInfo">${setsW[iteration].name}</div>`;
+		let infoList = ``;
 
 		for (let i = 0; i < setsW[iteration].ptaki.length; i++) {
 			infoList += `
@@ -188,8 +188,16 @@ function showInfoPanel(iteration, setsW) {
 		`;
 		}
 
-		let infoListHTML = `<ul>${infoList}</ul>
-		<br><br><br>`;
+		let infoListHTML = `
+		<div class="headInfoBox">
+			<div class="setNameInfo">${setsW[iteration].name}</div>
+
+			<button class="removeInfoPanel" onclick="removeInfoPanel()">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
+		<ul>${infoList}</ul>
+		`;
 
 		infoContent.innerHTML = infoListHTML;
 	});
@@ -202,9 +210,6 @@ function getInfoPanel() {
 	return `
 	
 	<div class="infoPanel hidden">
-		<button onclick="removeInfoPanel()">
-			<i class="fa-solid fa-xmark"></i>
-		</button>
 		<div class="infoContent"></div>
 	</div>`;
 }

@@ -33,6 +33,13 @@
     border-radius: 0;
 }
 
+#mySets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 
 .birdHidden{
     background-color: transparent;
@@ -66,6 +73,9 @@
 /* Save */
 #saveBtn{
     color: var(--second-text-color);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
+    margin-bottom: 50px;
 }
 
 /* Input */
@@ -117,4 +127,12 @@
 
 .listFam{
     font-size: 12px;
+}
+
+
+/* LVL */
+
+#mySets .levelBtnCont{
+    margin-left: auto;
+    margin-right: auto;
 }

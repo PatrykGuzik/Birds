@@ -1,6 +1,5 @@
 /* First Page of card */
 .firstPage{
-    padding-top: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -92,6 +91,7 @@
 
 
 .playBtn{
+    margin-top: 30px;
     box-shadow:none;
     width: 200px;
     height: 200px;

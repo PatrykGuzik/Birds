@@ -94,7 +94,7 @@ const trimTrailingSpaces = str => str.replace(/\s+$/, "");
 function getHTMLSet(set, iteration, sets, isTrash = false) {
 	
 	let trashCan = `
-		<button class="trashSet hidden" id="trash${iteration}" onclick="removeSet(${iteration})">
+		<button class="trashSet displayNone" id="trash${iteration}" onclick="removeSet(${iteration})">
 			<i class="fa-solid fa-trash-can"></i>
 		</button>
 	`;
@@ -139,7 +139,7 @@ function removeItemByName(data, nameToRemove) {
 }
 
 function removeInfoPanel() {
-
+	
 	const readyMadeSets = document.querySelector(".readyMadeSets")
 	readyMadeSets.classList.remove("removeOpacity")
 

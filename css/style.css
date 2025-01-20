@@ -27,6 +27,7 @@
     --second-button-color: #6D9773;
     --card-color: #ffffff16;
     --white-text: rgba(255, 255, 255, 0.637);
+    --black-text: rgba(0, 0, 0, 0.637);
   }
 
 body{
@@ -71,6 +72,9 @@ button{
     border-radius: 10px; 
 }
 
+.displayNone{
+    display: none !important;
+}
 
 .removeOpacity{
     /* left: 100%; */
@@ -147,15 +151,17 @@ button{
 
 /* Info panel */
 .infoPanel{
-    margin-top: 15px;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+}
+
+.infoContent{
     position:fixed;
     border-radius: 10px;
     left: 50%;
-    background-color: var(--main-button-color);
-    padding: 15px;
-    width: 80%;
-    height: 80vh;
-    /* padding-bottom: 20px; */
+    width: 90%;
+    height: 75vh;
+    padding-bottom: 20px;
     transform: translate(-50%);
     z-index: 999;
     transition: all 0.4s ease;
@@ -165,8 +171,10 @@ button{
 }
 
 .hidden {
-    display: none !important;
+    opacity: 0;
   }
+
+
 
 .headInfoBox{
     display: flex;
@@ -174,9 +182,9 @@ button{
     position: sticky;
     top: 0px;
     z-index: 9999;
-    background-color: #000000aa;
+    background-color: #ffffffaa;
     backdrop-filter: blur(10px);
-    border-radius: 5px;
+    border-radius: 5px 0;
 }
 
 .removeInfoPanel{
@@ -186,6 +194,7 @@ button{
     width: 50px;
     height: 50px;
     background-color: transparent;
+    color: var(--black-text);
     padding: 0;
     margin: 0;
     box-shadow: none;
@@ -200,6 +209,7 @@ button{
 }
 
 .infoPanel li{
+    margin-left: 10px;
     margin-top: 3px;
     color: var(--white-text);
     font-size: 20px;
@@ -209,7 +219,7 @@ button{
 .setNameInfo{
     position:sticky;
     display: inline;
-    color: var(--white-text);
+    color: var(--black-text);
     padding: 10px;
     border-radius: 5px;
     font-size: 30px;
@@ -295,10 +305,6 @@ button{
 }
 
 
-@keyframes example {
-    from {transform: translate(0,0); }
-    to {transform: translate(-100%,0); }
-}
 
 
 /* LEVEL */

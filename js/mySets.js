@@ -127,11 +127,11 @@ function removeSets() {
 	
 
 	trashCans.forEach(element => {
-  		element.classList.toggle("hidden");
+  		element.classList.toggle("displayNone");
 	});
 
 	learnBtn.forEach(element => {
-		element.classList.toggle("hidden");
+		element.classList.toggle("displayNone");
   });
 
 //   Zmiana koloru przycisku

@@ -99,6 +99,11 @@ function removeInfoPanelBird() {
 
 	// pokazanie tła birdsMenu
 	birdsMenu.classList.remove("hideMenuBirds")
+	const infoPanel2 = document.querySelectorAll(".infoPanel");
+	
+	infoPanel2.forEach(element => {
+		element.classList.remove("hideMenuBirds")
+	});
 }
 
 
@@ -160,15 +165,18 @@ function getBirdListHTML(birdList) {
 }
 
 function showInfoPanelBird(nazwa) {
-	console.log(sortType);
 	
 	const infoPanel = document.querySelector(".infoPanelBird");
 	const birdToShow = findBirdFromList(birds, nazwa);
 	const infoContent = document.querySelector(".infoBirdContent");
 	const birdsMenu = document.querySelector(".birdsMenu")
+	const infoPanel2 = document.querySelector(".infoPanel");
+
 
 	// usunięcie tła birdsMenu
 	birdsMenu.classList.add("hideMenuBirds")
+	infoPanel2.classList.add("hideMenuBirds")
+
 
 
 	let songs = "";

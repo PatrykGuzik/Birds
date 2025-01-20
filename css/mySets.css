@@ -6,6 +6,10 @@
     margin-right: auto;
 }
 
+.mySets{
+    transition: all 0.25s ease;
+}
+
 /* Lista ptaków do wybrania */
 .birdA{
     background-color: transparent;

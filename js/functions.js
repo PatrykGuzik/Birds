@@ -139,7 +139,9 @@ function removeItemByName(data, nameToRemove) {
 }
 
 function removeInfoPanel() {
-	
+	const infoContent = document.querySelector(".infoContent");
+	infoContent.classList.add("hiddenRight")
+
 	const readyMadeSets = document.querySelector(".readyMadeSets")
 	readyMadeSets.classList.remove("removeOpacity")
 
@@ -151,6 +153,7 @@ function removeInfoPanel() {
 	stopAllMediaPlayers()
 	infoPanel.forEach(element => {
 		element.classList.add("hidden");
+		
 	});
 }
 
@@ -167,9 +170,10 @@ function showInfoPanel(iteration, setsW) {
 
 	infoPanel.forEach(element => {
 		element.classList.toggle("hidden");
+		
 
 		const infoContent = document.querySelector(".infoContent");
-
+		infoContent.classList.remove("hiddenRight")
 		let infoList = ``;
 
 		for (let i = 0; i < setsW[iteration].ptaki.length; i++) {

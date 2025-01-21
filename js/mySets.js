@@ -94,17 +94,6 @@ function setNewSet() {
 		if (nameOfSet.value != "") {
 			mySets.push(createNewBirdList(nameOfSet.value, mySet, birds));
 
-			// mySets2.push(
-			// 	{ 
-			// 		name: nameOfSet.value,
-			// 		ptaki: mySet 
-			// 	});
-			// console.log(mySets2);
-			
-
-
-			
-
 			localStorage.setItem("myBirds", JSON.stringify(mySets));
 
 			getMySets();

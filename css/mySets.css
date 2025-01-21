@@ -46,16 +46,16 @@
 
 
 .birdHidden{
-    background-color: transparent;
     width: 90%;
-    color:rgb(20, 145, 7);
+    color:rgba(248, 255, 248, 0.784);
     margin-left: auto;
     margin-right: auto;
     display: block;
     font-size: 20px;
     padding: 10px;
-    border-bottom: 1px solid var(--main-text-color);
+    /* border-bottom: 1px solid var(--main-text-color); */
     display: none;
+  
 }
 
 .inputContainer{
@@ -71,11 +71,13 @@
 .validationInput{
     display: none;
     text-align: center;
-    color: rgb(203, 22, 1);
+    color: rgba(251, 71, 51, 0.907);
 }
 
 /* Save */
 #saveBtn{
+    position:sticky;
+    top: 0;
     color: var(--second-text-color);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.305);
@@ -84,15 +86,18 @@
 
 /* Input */
 #nameOfSet{
-    background-color: white;
     margin-left: auto;
     margin-right: auto;
     display: block;
     margin-top: 10px;
     font-size: 20px;
     padding: 10px;
-    border: 3px solid black;
     border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(2px);
+    border: 3px solid rgba(255, 255, 255, 0.305);
+    color: white;
+    font-size: 22px;
 }
 
 .addRemoveCont{
@@ -121,7 +126,10 @@
 .hiddenBirdsCont{
     margin-bottom: 20px;
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.071);
+    border-radius: 7px 7px 0 0;
+    background-color: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.305);
 }
 
 

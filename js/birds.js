@@ -886,19 +886,6 @@ const birds = [
 		rodzina: "kaczkowate"
 	},
 	{
-		nazwa: "Krakwa",
-		nazwaENG: "Gadwall",
-		nazwaLat: "Mareca strepera",
-		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Anas_strepera_FWS.jpg/620px-Anas_strepera_FWS.jpg",
-		autorJPG: "",
-		spiew: ["xeno-canto.org/sounds/uploaded/WBZVBDKAUE/XC943950-gadwall.mp3"],
-		autorzyDzwiekow: ["Paul Kelly"],
-		siedlisko: "",
-		opis: "",
-		okres: "",
-		rodzina: "kaczkowate"
-	},
-	{
 		nazwa: "Cyranka",
 		nazwaENG: "Garganey",
 		nazwaLat: "Spatula querquedula",
@@ -937,32 +924,111 @@ const birds = [
 		okres: "",
 		rodzina: "kaczkowate"
 	},
-	// {
-	// 	nazwa: "Płaskonos",
-	// 	nazwaENG: "Northern Shoveler",
-	// 	nazwaLat: "Spatula clypeata",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
-	// {
-	// 	nazwa: "Rożeniec",
-	// 	nazwaENG: "Northern Pintail",
-	// 	nazwaLat: "Anas acuta",
-	// 	jpg: "",
-	// 	autorJPG: "",
-	// 	spiew: [""],
-	// 	autorzyDzwiekow: [""],
-	// 	siedlisko: "",
-	// 	opis: "",
-	// 	okres: "",
-	// 	rodzina: ""
-	// },
+	{
+		nazwa: "Czernica",
+		nazwaENG: "Tufted Duck",
+		nazwaLat: "Aythya fuligula",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Reiherente_%28Aythya_fuligula%29_auf_dunklem_Wasser.jpg/600px-Reiherente_%28Aythya_fuligula%29_auf_dunklem_Wasser.jpg",
+		autorJPG: "Stephan Sprinz, CC BY 4.0, https://commons.wikimedia.org/w/index.php?curid=151273001",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC912695-Vigg_17.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	{
+		nazwa: "Gągoł",
+		nazwaENG: "Common Goldeneye",
+		nazwaLat: "Bucephala clangula",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/%D0%9E%D0%B1%D1%8B%D0%BA%D0%BD%D0%BE%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C_%28Bucephala_clangula%2C_m%29%2C_%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5.tif/lossy-page1-640px-%D0%9E%D0%B1%D1%8B%D0%BA%D0%BD%D0%BE%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%B3%D0%BE%D0%BB%D1%8C_%28Bucephala_clangula%2C_m%29%2C_%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5.tif.jpg",
+		autorJPG: "Dion Art, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=128557140",
+		spiew: ["xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC750030-Knipa_18.mp3"],
+		autorzyDzwiekow: ["Lars Edenius"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	{
+		nazwa: "Głowienka",
+		nazwaENG: "Common Pochard",
+		nazwaLat: "Aythya ferina",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D1%8B%D1%80%D0%BE%D0%BA_%28Aythya_ferina%2C_mas%29%2C_%D0%91%D0%B5%D0%BB%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE.jpg/640px-%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BD%D1%8B%D1%80%D0%BE%D0%BA_%28Aythya_ferina%2C_mas%29%2C_%D0%91%D0%B5%D0%BB%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE.jpg",
+		autorJPG: "Dion Art, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=131107912",
+		spiew: ["xeno-canto.org/sounds/uploaded/IHTOXYRBUZ/XC682774-169135-10123755-4853.mp3"],
+		autorzyDzwiekow: ["Jean Christophe Pratt"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	{
+		nazwa: "Krakwa",
+		nazwaENG: "Gadwall",
+		nazwaLat: "Mareca strepera",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Anas_strepera_FWS.jpg/620px-Anas_strepera_FWS.jpg",
+		autorJPG: "Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=162017",
+		spiew: ["xeno-canto.org/sounds/uploaded/YNOAMCSSHX/XC884914-Gadwall%E8%B5%A4%E8%86%80%E9%B8%AD-call-%E6%B1%82%E5%81%B6-%E5%B4%87%E6%98%8E%E4%B8%9C%E6%BB%A9-2311270813_0033_5-6---A.mp3"],
+		autorzyDzwiekow: ["Bo Shunqi薄顺奇"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	{
+		nazwa: "Ogorzałka",
+		nazwaENG: "Greater Scaup",
+		nazwaLat: "Aythya marila",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Greater-scaup-male2.jpg/640px-Greater-scaup-male2.jpg",
+		autorJPG: "Calibas, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=3435173",
+		spiew: ["xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC322882-LS_52139%20Greater%20Scaup%20call%20B.mp3"],
+		autorzyDzwiekow: ["Peter Boesman"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	{
+		nazwa: "Ohar",
+		nazwaENG: "Common Shelduck",
+		nazwaLat: "Tadorna tadorna",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Common.shelduck.2.arp.750pix.jpg/640px-Common.shelduck.2.arp.750pix.jpg",
+		autorJPG: "Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=67407",
+		spiew: ["xeno-canto.org/sounds/uploaded/HRVQAOEHRR/XC936128-Shelducks-8-4-23-Beddington.mp3"],
+		autorzyDzwiekow: ["Arjun Dutta"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	
+	{
+		nazwa: "Płaskonos",
+		nazwaENG: "Northern Shoveler",
+		nazwaLat: "Spatula clypeata",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Anas_clypeata_2.jpg/640px-Anas_clypeata_2.jpg",
+		autorJPG: "Al Wilson, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=1174219",
+		spiew: ["xeno-canto.org/sounds/uploaded/ZNCDXTUOFL/XC644498-JAREK-MATUSIAK-A-1551%20%282.1%29%20p%C5%82askonos%20samica.mp3"],
+		autorzyDzwiekow: ["Jarek Matusiak"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
+	{
+		nazwa: "Rożeniec",
+		nazwaENG: "Northern Pintail",
+		nazwaLat: "Anas acuta",
+		jpg: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Northern_Pintail.jpg/640px-Northern_Pintail.jpg",
+		autorJPG: "Domena publiczna, https://commons.wikimedia.org/w/index.php?curid=679017",
+		spiew: ["xeno-canto.org/sounds/uploaded/JPBSNBUUEF/XC770744-Northern-Pintail,-Albufeira,-221221-041.mp3"],
+		autorzyDzwiekow: ["Jerome Fischer"],
+		siedlisko: "",
+		opis: "",
+		okres: "",
+		rodzina: "kaczkowate"
+	},
 	// {
 	// 	nazwa: "Łabędź Niemy",
 	// 	nazwaENG: "Mute Swan",
@@ -1679,8 +1745,9 @@ const birdList4 = ["Sierpówka", "Dzwoniec", "Oknówka", "Modraszka", "Pełzacz 
 // Siewki  dodać "Sieweczka Rzeczna", "Sieweczka Obrożna"
 const birdList5 = ["Czajka", "Kszyk", "Słonka", "Krwawodziób", "Łęczak", "Samotnik", "Rycyk", "Szlamnik"]
 
-// Kaczki i Łabędzie
-const birdList6 = ["Krzyżówka", "Krakwa", "Cyranka", "Cyraneczka", "Świstun", "Płaskonos", "Rożeniec", "Łąbędź Niemy", "Łabędź Krzykliwy", "Łabędź Czarnodzioby"]
+// Kaczki 
+const birdList6 = ["Cyraneczka", "Cyranka", "Czernica", "Gągoł", "Głowienka", "Krakwa", "Krzyżówka", "Ogorzałka", "Świstun", "Ohar", "Płaskonos", "Rożeniec"
+]
 
 // Gęsi
 const birdList7 = ["Gęgawa", "Gęś Zbożowa", "Gęś Tundrowa", "Gęś Białoczelna", "Gęś Mała", "Gęś Krótkodzioba", "Bernikla Kanadyjska", "Bernikla Białoszyja", "Bernikla Obrożna"]
@@ -1708,6 +1775,8 @@ sets.push(createNewBirdList("Ptaki Miasta 1", birdList2, birds));
 sets.push(createNewBirdList("Ptaki Miasta 2", birdList3, birds));
 sets.push(createNewBirdList("Ptaki Miasta 3", birdList4, birds));
 sets.push(createNewBirdList("Siewki", birdList5, birds));
+sets.push(createNewBirdList("Kaczkowate", birdList6, birds));
+
 sets.push(createNewBirdList("Szponiaste", birdList8, birds));
 
 
